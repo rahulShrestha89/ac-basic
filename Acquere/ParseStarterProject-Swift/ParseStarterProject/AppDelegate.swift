@@ -27,6 +27,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //--------------------------------------
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        UINavigationBar.appearance().barTintColor = UIColor(red: 0.008, green: 0.533, blue: 0.82, alpha: 1.0)
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        //UINavigationBar.appearance().titleTextAttributes =
+          //  [ NSFontAttributeName: UIFont(name: //"CaviarDreams", size: 20)!]
+        
+        
+        
         // Enable storing and querying data from Local Datastore.
         // Remove this line if you don't want to use Local Datastore features or want to use cachePolicy.
         Parse.enableLocalDatastore()

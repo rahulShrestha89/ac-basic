@@ -19,7 +19,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+        self.navigationController!.navigationBar.hidden=true
+        
         // UI changes to Sign Up Button
         signUpButton.layer.cornerRadius = 12
         signUpButton.backgroundColor = UIColor(red: 1, green: 0.541, blue: 0.396, alpha: 1.0)
@@ -43,9 +44,12 @@ class ViewController: UIViewController {
         self.view.addSubview(verticalLineView)
       
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController!.navigationBar.hidden=true
     }
+    
+    
+
+   
 }
