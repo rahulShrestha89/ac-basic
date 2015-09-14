@@ -20,8 +20,31 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1.8.2</string>
+	<key>Fabric</key>
+	<dict>
+		<key>APIKey</key>
+		<string>017b5a5e7a74b9044987375b646e9e9c5e2a9ce4</string>
+		<key>Kits</key>
+		<array>
+			<dict>
+				<key>KitInfo</key>
+				<dict>
+					<key>consumerKey</key>
+					<string>Aek1ay5rwbspfsNBrMDpMSoZl</string>
+					<key>consumerSecret</key>
+					<string>OYPTarXiGA2SFWplP2c538VChLWV31a6ri6kSHsYBCI061bN7B</string>
+				</dict>
+				<key>KitName</key>
+				<string>Twitter</string>
+			</dict>
+		</array>
+	</dict>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>DK Liquid Embrace.ttf</string>
+	</array>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -33,10 +56,6 @@
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>DK Liquid Embrace.ttf</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>

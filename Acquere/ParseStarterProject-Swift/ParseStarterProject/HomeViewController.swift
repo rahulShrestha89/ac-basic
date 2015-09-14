@@ -24,7 +24,6 @@ class ViewController: UIViewController {
         // UI changes to Sign Up Button
         signUpButton.layer.cornerRadius = 12
         signUpButton.backgroundColor = UIColor(red: 1, green: 0.541, blue: 0.396, alpha: 1.0)
-        signUpButton.layer.borderColor = UIColor.clearColor().CGColor
         
         // working out the horizontal and vertical lines
         var bounds = UIScreen.mainScreen().bounds

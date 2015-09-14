@@ -8,6 +8,8 @@
 */
 
 import UIKit
+import Fabric
+import TwitterKit
 
 import Parse
 
@@ -28,17 +30,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        UINavigationBar.appearance().barTintColor = UIColor(red: 0.008, green: 0.533, blue: 0.82, alpha: 1.0)
-        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        UINavigationBar.appearance().barTintColor = UIColor(red: 0.31, green: 0.765, blue: 0.969, alpha: 1.0)
+        //UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-        //UINavigationBar.appearance().titleTextAttributes =
-          //  [ NSFontAttributeName: UIFont(name: //"CaviarDreams", size: 20)!]
-        
-        
+        UINavigationBar.appearance().backIndicatorImage = UIImage(named: "GoBack")!
+        let backImg: UIImage = UIImage(named: "GoBack")!
+        UIBarButtonItem.appearance().setBackButtonBackgroundImage(backImg, forState: .Normal, barMetrics: .Default)
+       
         
         // Enable storing and querying data from Local Datastore.
         // Remove this line if you don't want to use Local Datastore features or want to use cachePolicy.
         Parse.enableLocalDatastore()
+        Fabric.with([Twitter.self()])
 
         // ****************************************************************************
         // Uncomment this line if you want to enable Crash Reporting
@@ -48,6 +51,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Parse.setApplicationId("0WIFgvDjclrIRUZJTD5MjW02iNfv74GkUD78ipC6",
             clientKey: "mbJQmq5YAE21XLruBib7HDPV5VAsfOlQY1EV3tHk")
+        
+        
         
         //
         // If you are using Facebook, uncomment and add your FacebookAppID to your bundle's plist as

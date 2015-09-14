@@ -27,7 +27,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ACQUERE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gkd-xB-aac">
-                                <rect key="frame" x="161" y="169" width="277" height="64"/>
+                                <rect key="frame" x="175" y="169" width="249" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="277" id="8hn-8b-0OM"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="277" id="9cS-RH-R4w"/>
@@ -44,7 +44,7 @@
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="8" maxX="40" maxY="8"/>
                                 <state key="normal" title="Sign Up">
-                                    <color key="titleColor" red="0.97647064924240112" green="0.99215692281723022" blue="0.99215692281723022" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.9490196704864502" green="0.98431378602981567" blue="0.9803922176361084" alpha="1" colorSpace="deviceRGB"/>
                                 </state>
                                 <connections>
@@ -112,22 +112,7 @@
                     <view key="view" contentMode="scaleToFill" id="Wqa-pc-Uvp">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="HomeBackgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="PeX-fu-DUn">
-                                <rect key="frame" x="0.0" y="-28" width="677" height="628"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="677" id="361-EL-Bvv"/>
-                                    <constraint firstAttribute="height" constant="628" id="ueB-3c-kUv"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="PeX-fu-DUn" firstAttribute="top" secondItem="Wqa-pc-Uvp" secondAttribute="top" id="H8F-Qx-iN6"/>
-                            <constraint firstItem="PeX-fu-DUn" firstAttribute="leading" secondItem="Wqa-pc-Uvp" secondAttribute="leading" id="UnN-e9-vBg"/>
-                            <constraint firstAttribute="trailing" secondItem="PeX-fu-DUn" secondAttribute="trailing" id="bG5-7e-gt1"/>
-                            <constraint firstItem="BBJ-mv-2YZ" firstAttribute="top" secondItem="PeX-fu-DUn" secondAttribute="bottom" id="gPd-7b-9h0"/>
-                        </constraints>
+                        <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RcZ-ca-hxL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -146,33 +131,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="HomeBackgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="Y86-vH-YNh">
-                                <rect key="frame" x="0.0" y="-95" width="656" height="695"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="695" id="Ke8-2G-d7W"/>
-                                    <constraint firstAttribute="width" constant="656" id="umP-on-JTN"/>
-                                </constraints>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ZA-WZ-jeW">
+                                <rect key="frame" x="166" y="101" width="274" height="55"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="19"/>
+                                <inset key="contentEdgeInsets" minX="17" minY="13" maxX="13" maxY="13"/>
+                                <state key="normal" title="  Connect with Facebook" image="FacebookLogo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZa-VU-HqB">
+                                <rect key="frame" x="142" y="169" width="270" height="48"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="19"/>
+                                <inset key="contentEdgeInsets" minX="29" minY="11" maxX="25" maxY="11"/>
+                                <state key="normal" title="  Connect with Twitter" image="TwitterLogo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ah5-K4-JZN">
+                                <rect key="frame" x="179" y="219" width="278" height="50"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="19"/>
+                                <inset key="contentEdgeInsets" minX="5" minY="11" maxX="32" maxY="11"/>
+                                <state key="normal" title="  Connect with LinkedIn" image="LinkedInLogo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Y86-vH-YNh" firstAttribute="top" secondItem="wxA-0Q-QA1" secondAttribute="top" id="NtH-qO-D72"/>
-                            <constraint firstItem="gDH-qb-oRS" firstAttribute="top" secondItem="Y86-vH-YNh" secondAttribute="bottom" id="kmT-Kx-9kv"/>
-                            <constraint firstAttribute="trailing" secondItem="Y86-vH-YNh" secondAttribute="trailing" id="qYF-ZU-c3B"/>
-                            <constraint firstItem="Y86-vH-YNh" firstAttribute="leading" secondItem="wxA-0Q-QA1" secondAttribute="leading" id="v44-43-A9G"/>
+                            <constraint firstAttribute="centerX" secondItem="7ZA-WZ-jeW" secondAttribute="centerX" constant="-3" id="7eA-qn-txc"/>
+                            <constraint firstItem="VZa-VU-HqB" firstAttribute="top" secondItem="7ZA-WZ-jeW" secondAttribute="bottom" constant="23" id="8kG-2G-Pvy"/>
+                            <constraint firstAttribute="centerX" secondItem="ah5-K4-JZN" secondAttribute="centerX" id="9Wy-aN-UjL"/>
+                            <constraint firstItem="ah5-K4-JZN" firstAttribute="top" secondItem="7ZA-WZ-jeW" secondAttribute="bottom" constant="95" id="MpD-Ur-BTu"/>
+                            <constraint firstAttribute="centerX" secondItem="VZa-VU-HqB" secondAttribute="centerX" constant="-3" id="fqa-HT-88d"/>
+                            <constraint firstItem="7ZA-WZ-jeW" firstAttribute="top" secondItem="Mrk-s9-MBv" secondAttribute="bottom" constant="37" id="wa6-vz-nsR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="facebookSignUpButton" destination="7ZA-WZ-jeW" id="7vE-kt-kUe"/>
+                        <outlet property="linkedInSignUpButton" destination="ah5-K4-JZN" id="gdL-qA-0IS"/>
+                        <outlet property="twitterSignUpButton" destination="VZa-VU-HqB" id="0rl-7G-J7h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wqI-vp-6ps" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2628" y="701"/>
+            <point key="canvasLocation" x="2629" y="670"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tP0-cU-gtc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="df3-ag-Gbs" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wLB-N6-RKV">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="GoBack" id="wLB-N6-RKV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -187,6 +196,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="FacebookLogo" width="29" height="29"/>
+        <image name="GoBack" width="32" height="32"/>
         <image name="HomeBackgroundImage" width="3000" height="2000"/>
+        <image name="LinkedInLogo" width="37" height="28"/>
+        <image name="TwitterLogo" width="26" height="22"/>
     </resources>
 </document>
