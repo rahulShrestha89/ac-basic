@@ -9,6 +9,7 @@
 
 import UIKit
 import Parse
+import MediaPlayer
 
 class ViewController: UIViewController {
 
@@ -16,10 +17,30 @@ class ViewController: UIViewController {
     @IBOutlet weak var logInButton: UIButton!
     @IBOutlet weak var lookAroundButton: UIButton!
    
+    var backGroundPlayer: MPMoviePlayerController!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         self.navigationController!.navigationBar.hidden=true
+    
+        
+        // Load the video from the app bundle.
+        let videoURL: NSURL = NSBundle.mainBundle().URLForResource("video", withExtension: "mov")!
+        
+        // Create and configure the movie player.
+        self.backGroundPlayer = MPMoviePlayerController(contentURL: videoURL)
+        
+        self.backGroundPlayer.controlStyle = MPMovieControlStyle.None
+        self.backGroundPlayer.scalingMode = MPMovieScalingMode.AspectFill
+        
+        self.backGroundPlayer.view.frame = self.view.frame
+        self.view .insertSubview(self.backGroundPlayer.view, atIndex: 0)
+        
+        self.backGroundPlayer.play()
+        
+        // Loop video.
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "loopVideo", name: MPMoviePlayerPlaybackDidFinishNotification, object: self.backGroundPlayer)
         
         // UI changes to Sign Up Button
         signUpButton.layer.cornerRadius = 12
@@ -42,6 +63,10 @@ class ViewController: UIViewController {
         self.view.addSubview(horizontalLineView)
         self.view.addSubview(verticalLineView)
       
+    }
+    
+    func loopVideo() {
+        self.backGroundPlayer.play()
     }
     
     override func viewWillAppear(animated: Bool) {

@@ -23,9 +23,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HomeBackgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="f7K-jL-U4f">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ACQUERE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gkd-xB-aac">
                                 <rect key="frame" x="175" y="169" width="249" height="64"/>
                                 <constraints>
@@ -76,13 +73,9 @@
                             <constraint firstItem="E9R-JV-vKP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="505" id="1aN-oK-VnB"/>
                             <constraint firstItem="7GY-BE-3qa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="505" id="5is-hD-eXj"/>
                             <constraint firstItem="Gkd-xB-aac" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="149" id="Ghh-bl-W9y"/>
-                            <constraint firstItem="f7K-jL-U4f" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Lk8-RI-Ypb"/>
                             <constraint firstAttribute="centerX" secondItem="3nQ-ua-0SM" secondAttribute="centerX" id="UId-GX-onu"/>
-                            <constraint firstItem="f7K-jL-U4f" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Vig-xa-lGm"/>
                             <constraint firstItem="E9R-JV-vKP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="VzC-ce-THg"/>
                             <constraint firstAttribute="centerX" secondItem="Gkd-xB-aac" secondAttribute="centerX" id="btg-1q-Ojn"/>
-                            <constraint firstAttribute="bottom" secondItem="f7K-jL-U4f" secondAttribute="bottom" id="cA3-4s-MBC"/>
-                            <constraint firstAttribute="trailing" secondItem="f7K-jL-U4f" secondAttribute="trailing" id="cEe-bp-EEn"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3nQ-ua-0SM" secondAttribute="bottom" constant="53" id="jrx-FT-gLa"/>
                             <constraint firstAttribute="centerX" secondItem="3nQ-ua-0SM" secondAttribute="centerX" id="ri1-Jf-13E"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7GY-BE-3qa" secondAttribute="trailing" constant="4" id="tvr-W4-xHW"/>
@@ -198,7 +191,6 @@
     <resources>
         <image name="FacebookLogo" width="29" height="29"/>
         <image name="GoBack" width="32" height="32"/>
-        <image name="HomeBackgroundImage" width="3000" height="2000"/>
         <image name="LinkedInLogo" width="37" height="28"/>
         <image name="TwitterLogo" width="26" height="22"/>
     </resources>

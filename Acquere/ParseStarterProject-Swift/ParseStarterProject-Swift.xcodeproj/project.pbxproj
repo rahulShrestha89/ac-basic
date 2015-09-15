@@ -15,6 +15,7 @@
 		53DACA1C1BA692ED0012D4A1 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DACA181BA692ED0012D4A1 /* TwitterKit.framework */; };
 		53DACA1D1BA692ED0012D4A1 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 53DACA191BA692ED0012D4A1 /* TwitterKitResources.bundle */; };
 		53DACA1E1BA692ED0012D4A1 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DACA1A1BA692ED0012D4A1 /* TwitterCore.framework */; };
+		53E292B11BA7DD7D007D4F86 /* video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 53E292B01BA7DD7D007D4F86 /* video.mov */; };
 		814C3ACB1B69877600E307BB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 814C3AC81B69877600E307BB /* Images.xcassets */; };
 		81BA814B1A49DA1800E65899 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA814A1A49DA1800E65899 /* AppDelegate.swift */; };
 		81BA814D1A49DA1800E65899 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BA814C1A49DA1800E65899 /* HomeViewController.swift */; };
@@ -34,6 +35,7 @@
 		53DACA181BA692ED0012D4A1 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
 		53DACA191BA692ED0012D4A1 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
 		53DACA1A1BA692ED0012D4A1 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
+		53E292B01BA7DD7D007D4F86 /* video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = video.mov; sourceTree = "<group>"; };
 		814C3AC71B69877600E307BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		814C3AC81B69877600E307BB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		814C3AC91B69877600E307BB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 		81BA81471A49DA1800E65899 /* ParseStarterProject */ = {
 			isa = PBXGroup;
 			children = (
+				53E292B01BA7DD7D007D4F86 /* video.mov */,
 				534946261BA528B400D64F29 /* LogInViewController.swift */,
 				81BA814A1A49DA1800E65899 /* AppDelegate.swift */,
 				81BA814C1A49DA1800E65899 /* HomeViewController.swift */,
@@ -202,6 +205,7 @@
 				53DACA1D1BA692ED0012D4A1 /* TwitterKitResources.bundle in Resources */,
 				537861111BA4C13F00D2A535 /* Main.storyboard in Resources */,
 				5338FBFE1B93E8CD00326E38 /* DK Liquid Embrace.ttf in Resources */,
+				53E292B11BA7DD7D007D4F86 /* video.mov in Resources */,
 				814C3ACB1B69877600E307BB /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
