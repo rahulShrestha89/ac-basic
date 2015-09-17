@@ -11,6 +11,7 @@ import TwitterKit
 
 class SignUpViewController: UIViewController {
 
+    @IBOutlet weak var emailSignUpButton: UIButton!
     @IBOutlet weak var linkedInSignUpButton: UIButton!
    
     @IBOutlet weak var twitterSignUpButton: UIButton!
@@ -24,7 +25,7 @@ class SignUpViewController: UIViewController {
         decorateButton(facebookSignUpButton,color: UIColor(red: 0.231, green: 0.349, blue: 0.596, alpha: 1.0) )
         decorateButton(twitterSignUpButton, color: UIColor(red: 0.333, green: 0.675, blue: 0.933, alpha: 1))
         decorateButton(linkedInSignUpButton, color: UIColor(red: 0, green: 0.467, blue: 0.71, alpha: 1))
-    
+        decorateButton(emailSignUpButton, color: UIColor(red: 0.961, green: 0.231, blue: 0.231, alpha: 1))
     }
    
     override func viewWillAppear(animated: Bool) {

@@ -115,7 +115,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDN-ab-f33">
-                                <rect key="frame" x="180" y="188" width="239" height="44"/>
+                                <rect key="frame" x="177" y="188" width="245" height="44"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
                                 <inset key="contentEdgeInsets" minX="26" minY="9" maxX="26" maxY="9"/>
                                 <state key="normal" title="  Log In with Twitter" image="TwitterLogo">
@@ -123,10 +123,18 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmQ-dD-gSe">
-                                <rect key="frame" x="176" y="240" width="247" height="46"/>
+                                <rect key="frame" x="173" y="240" width="253" height="46"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
                                 <inset key="contentEdgeInsets" minX="17" minY="9" maxX="17" maxY="9"/>
                                 <state key="normal" title="  Log In with LinkedIn" image="LinkedInLogo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zcy-Nq-Emz">
+                                <rect key="frame" x="174" y="314" width="251" height="43"/>
+                                <inset key="contentEdgeInsets" minX="39" minY="9" maxX="39" maxY="9"/>
+                                <state key="normal" title="  Log In with Email" image="EmailLogo">
+                                    <color key="titleColor" red="0.94901967050000002" green="0.98431378599999997" blue="0.98039221759999995" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -134,6 +142,7 @@
                         <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="v7r-vG-YlM" firstAttribute="top" secondItem="N1O-fD-EKN" secondAttribute="bottom" constant="37" id="0eE-hE-54q"/>
+                            <constraint firstAttribute="centerX" secondItem="Zcy-Nq-Emz" secondAttribute="centerX" constant="0.5" id="cLL-g3-pGd"/>
                             <constraint firstItem="DDN-ab-f33" firstAttribute="top" secondItem="v7r-vG-YlM" secondAttribute="bottom" constant="26" id="g21-O0-gdx"/>
                             <constraint firstAttribute="centerX" secondItem="vmQ-dD-gSe" secondAttribute="centerX" id="gHV-eO-iyG"/>
                             <constraint firstAttribute="centerX" secondItem="DDN-ab-f33" secondAttribute="centerX" id="vMO-Xa-Gyv"/>
@@ -142,6 +151,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emailLogInButton" destination="Zcy-Nq-Emz" id="Njy-KA-HOk"/>
                         <outlet property="facebookLogInButton" destination="v7r-vG-YlM" id="Vex-Wp-bM0"/>
                         <outlet property="linkedInLogInButton" destination="vmQ-dD-gSe" id="QRm-Yd-0Sb"/>
                         <outlet property="twitterLogInButton" destination="DDN-ab-f33" id="07s-q4-jeg"/>
@@ -182,8 +192,17 @@
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xln-O2-Rb8">
                                 <rect key="frame" x="164" y="228" width="271" height="46"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
-                                <inset key="contentEdgeInsets" minX="17" minY="9" maxX="17" maxY="9"/>
+                                <inset key="contentEdgeInsets" minX="16" minY="9" maxX="16" maxY="9"/>
                                 <state key="normal" title="  Connect with LinkedIn" image="LinkedInLogo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEE-9V-DeH">
+                                <rect key="frame" x="200" y="314" width="272" height="44"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
+                                <inset key="contentEdgeInsets" minX="36" minY="9" maxX="36" maxY="9"/>
+                                <state key="normal" title="  Connect with Email" image="EmailLogo">
+                                    <color key="titleColor" red="0.97647064920000004" green="0.99215692280000001" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -191,6 +210,7 @@
                         <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="2Zp-Zn-16s" secondAttribute="centerX" constant="0.5" id="74G-KI-wbT"/>
+                            <constraint firstAttribute="centerX" secondItem="hEE-9V-DeH" secondAttribute="centerX" constant="1" id="7dW-d9-7DE"/>
                             <constraint firstAttribute="centerX" secondItem="Xln-O2-Rb8" secondAttribute="centerX" constant="0.5" id="JZy-Uh-nvp"/>
                             <constraint firstAttribute="centerX" secondItem="5qc-lk-ZNz" secondAttribute="centerX" id="NYm-mR-68s"/>
                             <constraint firstItem="2Zp-Zn-16s" firstAttribute="top" secondItem="5qc-lk-ZNz" secondAttribute="bottom" constant="26" id="ZDE-Py-yBK"/>
@@ -198,6 +218,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emailSignUpButton" destination="hEE-9V-DeH" id="F5o-n8-tsq"/>
                         <outlet property="facebookSignUpButton" destination="5qc-lk-ZNz" id="UAj-38-6QW"/>
                         <outlet property="linkedInSignUpButton" destination="Xln-O2-Rb8" id="JVi-Zs-lVO"/>
                         <outlet property="twitterSignUpButton" destination="2Zp-Zn-16s" id="mVh-Xw-sfU"/>
@@ -227,6 +248,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="EmailLogo" width="25" height="25"/>
         <image name="FacebookLogo" width="29" height="29"/>
         <image name="GoBack" width="32" height="32"/>
         <image name="LinkedInLogo" width="37" height="28"/>
