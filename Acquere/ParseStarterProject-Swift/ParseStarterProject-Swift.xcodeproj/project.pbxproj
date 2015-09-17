@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		530CB11A1BAABCC70004200C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 814C3AC61B69877600E307BB /* Main.storyboard */; };
 		5338FBFE1B93E8CD00326E38 /* DK Liquid Embrace.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5338FBFD1B93E8CD00326E38 /* DK Liquid Embrace.ttf */; };
 		534946271BA528B400D64F29 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534946261BA528B400D64F29 /* LogInViewController.swift */; };
-		537861111BA4C13F00D2A535 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 814C3AC61B69877600E307BB /* Main.storyboard */; };
 		537861131BA4D8BF00D2A535 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537861121BA4D8BF00D2A535 /* SignUpViewController.swift */; };
 		53DACA1B1BA692ED0012D4A1 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DACA171BA692ED0012D4A1 /* Fabric.framework */; };
 		53DACA1C1BA692ED0012D4A1 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DACA181BA692ED0012D4A1 /* TwitterKit.framework */; };
@@ -202,8 +202,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				530CB11A1BAABCC70004200C /* Main.storyboard in Resources */,
 				53DACA1D1BA692ED0012D4A1 /* TwitterKitResources.bundle in Resources */,
-				537861111BA4C13F00D2A535 /* Main.storyboard in Resources */,
 				5338FBFE1B93E8CD00326E38 /* DK Liquid Embrace.ttf in Resources */,
 				53E292B11BA7DD7D007D4F86 /* video.mov in Resources */,
 				814C3ACB1B69877600E307BB /* Images.xcassets in Resources */,

@@ -10,10 +10,19 @@ import UIKit
 
 class LogInViewController: UIViewController {
 
+    @IBOutlet weak var linkedInLogInButton: UIButton!
+   @IBOutlet weak var facebookLogInButton: UIButton!
+    @IBOutlet weak var twitterLogInButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationController!.navigationBar.hidden=false
+        
+    
+        decorateButton(facebookLogInButton,color: UIColor(red: 0.231, green: 0.349, blue: 0.596, alpha: 1.0) )
+         decorateButton(twitterLogInButton, color: UIColor(red: 0.333, green: 0.675, blue: 0.933, alpha: 1))
+         decorateButton(linkedInLogInButton, color: UIColor(red: 0, green: 0.467, blue: 0.71, alpha: 1))
+        
         
     }
     
@@ -22,16 +31,16 @@ class LogInViewController: UIViewController {
     }
 
     
+    private func decorateButton(button: UIButton, color: UIColor) {
+        
+        button.setTitleColor(color, forState: UIControlState.Normal)
+        button.layer.borderColor = color.CGColor
+        button.backgroundColor = UIColor.clearColor()
+        button.layer.borderWidth = 2
+        button.layer.cornerRadius = 7
+    }
+    
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

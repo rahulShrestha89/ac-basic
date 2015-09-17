@@ -105,8 +105,47 @@
                     <view key="view" contentMode="scaleToFill" id="Wqa-pc-Uvp">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7r-vG-YlM">
+                                <rect key="frame" x="176" y="115" width="248" height="47"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
+                                <inset key="contentEdgeInsets" minX="13" minY="9" maxX="13" maxY="9"/>
+                                <state key="normal" title="  Log In with Facebook" image="FacebookLogo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDN-ab-f33">
+                                <rect key="frame" x="180" y="188" width="239" height="44"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
+                                <inset key="contentEdgeInsets" minX="26" minY="9" maxX="26" maxY="9"/>
+                                <state key="normal" title="  Log In with Twitter" image="TwitterLogo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmQ-dD-gSe">
+                                <rect key="frame" x="176" y="240" width="247" height="46"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
+                                <inset key="contentEdgeInsets" minX="17" minY="9" maxX="17" maxY="9"/>
+                                <state key="normal" title="  Log In with LinkedIn" image="LinkedInLogo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="v7r-vG-YlM" firstAttribute="top" secondItem="N1O-fD-EKN" secondAttribute="bottom" constant="37" id="0eE-hE-54q"/>
+                            <constraint firstItem="DDN-ab-f33" firstAttribute="top" secondItem="v7r-vG-YlM" secondAttribute="bottom" constant="26" id="g21-O0-gdx"/>
+                            <constraint firstAttribute="centerX" secondItem="vmQ-dD-gSe" secondAttribute="centerX" id="gHV-eO-iyG"/>
+                            <constraint firstAttribute="centerX" secondItem="DDN-ab-f33" secondAttribute="centerX" id="vMO-Xa-Gyv"/>
+                            <constraint firstAttribute="centerX" secondItem="v7r-vG-YlM" secondAttribute="centerX" id="x0l-mI-Bbp"/>
+                            <constraint firstItem="vmQ-dD-gSe" firstAttribute="top" secondItem="DDN-ab-f33" secondAttribute="bottom" constant="28" id="zEE-OT-Ypc"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="facebookLogInButton" destination="v7r-vG-YlM" id="Vex-Wp-bM0"/>
+                        <outlet property="linkedInLogInButton" destination="vmQ-dD-gSe" id="QRm-Yd-0Sb"/>
+                        <outlet property="twitterLogInButton" destination="DDN-ab-f33" id="07s-q4-jeg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RcZ-ca-hxL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -124,26 +163,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ZA-WZ-jeW">
-                                <rect key="frame" x="166" y="101" width="274" height="55"/>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="19"/>
-                                <inset key="contentEdgeInsets" minX="17" minY="13" maxX="13" maxY="13"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qc-lk-ZNz">
+                                <rect key="frame" x="166" y="95" width="267" height="47"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
+                                <inset key="contentEdgeInsets" minX="13" minY="9" maxX="13" maxY="9"/>
                                 <state key="normal" title="  Connect with Facebook" image="FacebookLogo">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZa-VU-HqB">
-                                <rect key="frame" x="142" y="169" width="270" height="48"/>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="19"/>
-                                <inset key="contentEdgeInsets" minX="29" minY="11" maxX="25" maxY="11"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Zp-Zn-16s">
+                                <rect key="frame" x="168" y="167" width="263" height="44"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
+                                <inset key="contentEdgeInsets" minX="26" minY="9" maxX="26" maxY="9"/>
                                 <state key="normal" title="  Connect with Twitter" image="TwitterLogo">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ah5-K4-JZN">
-                                <rect key="frame" x="179" y="219" width="278" height="50"/>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="19"/>
-                                <inset key="contentEdgeInsets" minX="5" minY="11" maxX="32" maxY="11"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xln-O2-Rb8">
+                                <rect key="frame" x="164" y="228" width="271" height="46"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
+                                <inset key="contentEdgeInsets" minX="17" minY="9" maxX="17" maxY="9"/>
                                 <state key="normal" title="  Connect with LinkedIn" image="LinkedInLogo">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -151,18 +190,17 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="7ZA-WZ-jeW" secondAttribute="centerX" constant="-3" id="7eA-qn-txc"/>
-                            <constraint firstItem="VZa-VU-HqB" firstAttribute="top" secondItem="7ZA-WZ-jeW" secondAttribute="bottom" constant="23" id="8kG-2G-Pvy"/>
-                            <constraint firstAttribute="centerX" secondItem="ah5-K4-JZN" secondAttribute="centerX" id="9Wy-aN-UjL"/>
-                            <constraint firstItem="ah5-K4-JZN" firstAttribute="top" secondItem="7ZA-WZ-jeW" secondAttribute="bottom" constant="95" id="MpD-Ur-BTu"/>
-                            <constraint firstAttribute="centerX" secondItem="VZa-VU-HqB" secondAttribute="centerX" constant="-3" id="fqa-HT-88d"/>
-                            <constraint firstItem="7ZA-WZ-jeW" firstAttribute="top" secondItem="Mrk-s9-MBv" secondAttribute="bottom" constant="37" id="wa6-vz-nsR"/>
+                            <constraint firstAttribute="centerX" secondItem="2Zp-Zn-16s" secondAttribute="centerX" constant="0.5" id="74G-KI-wbT"/>
+                            <constraint firstAttribute="centerX" secondItem="Xln-O2-Rb8" secondAttribute="centerX" constant="0.5" id="JZy-Uh-nvp"/>
+                            <constraint firstAttribute="centerX" secondItem="5qc-lk-ZNz" secondAttribute="centerX" id="NYm-mR-68s"/>
+                            <constraint firstItem="2Zp-Zn-16s" firstAttribute="top" secondItem="5qc-lk-ZNz" secondAttribute="bottom" constant="26" id="ZDE-Py-yBK"/>
+                            <constraint firstItem="Xln-O2-Rb8" firstAttribute="top" secondItem="2Zp-Zn-16s" secondAttribute="bottom" constant="28" id="lP6-r2-CpD"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="facebookSignUpButton" destination="7ZA-WZ-jeW" id="7vE-kt-kUe"/>
-                        <outlet property="linkedInSignUpButton" destination="ah5-K4-JZN" id="gdL-qA-0IS"/>
-                        <outlet property="twitterSignUpButton" destination="VZa-VU-HqB" id="0rl-7G-J7h"/>
+                        <outlet property="facebookSignUpButton" destination="5qc-lk-ZNz" id="UAj-38-6QW"/>
+                        <outlet property="linkedInSignUpButton" destination="Xln-O2-Rb8" id="JVi-Zs-lVO"/>
+                        <outlet property="twitterSignUpButton" destination="2Zp-Zn-16s" id="mVh-Xw-sfU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wqI-vp-6ps" userLabel="First Responder" sceneMemberID="firstResponder"/>
