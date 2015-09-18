@@ -10,6 +10,7 @@ import UIKit
 
 class LogInViewController: UIViewController {
 
+    @IBOutlet weak var signUpThroughLoginView: UIButton!
     @IBOutlet weak var emailLogInButton: UIButton!
     @IBOutlet weak var linkedInLogInButton: UIButton!
    @IBOutlet weak var facebookLogInButton: UIButton!
@@ -17,7 +18,7 @@ class LogInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController!.navigationBar.hidden=false
+       // self.navigationController!.navigationBar.hidden=false
         
     
         decorateButton(facebookLogInButton,color: UIColor(red: 0.231, green: 0.349, blue: 0.596, alpha: 1.0) )
@@ -25,11 +26,12 @@ class LogInViewController: UIViewController {
          decorateButton(linkedInLogInButton, color: UIColor(red: 0, green: 0.467, blue: 0.71, alpha: 1))
         decorateButton(emailLogInButton, color: UIColor(red: 0.961, green: 0.231, blue: 0.231, alpha: 1))
         
+        decorateButton(signUpThroughLoginView, color: UIColor.blackColor())
         
     }
     
     override func viewWillAppear(animated: Bool) {
-        self.navigationController!.navigationBar.hidden=false
+       // self.navigationController!.navigationBar.hidden=false
     }
 
     

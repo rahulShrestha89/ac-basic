@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="df3-ag-Gbs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
@@ -45,7 +45,7 @@
                                     <color key="titleShadowColor" red="0.9490196704864502" green="0.98431378602981567" blue="0.9803922176361084" alpha="1" colorSpace="deviceRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="7Up-9g-KsN" kind="show" identifier="homeToSignUp" id="WWa-jn-ukK"/>
+                                    <segue destination="7Up-9g-KsN" kind="presentation" identifier="homeToSignUp" id="WWa-jn-ukK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9R-JV-vKP">
@@ -56,7 +56,7 @@
                                     <color key="titleShadowColor" red="0.96862751245498657" green="0.98823535442352295" blue="0.9647059440612793" alpha="1" colorSpace="deviceRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="10H-WK-vzb" kind="show" id="5hu-QM-ew4"/>
+                                    <segue destination="10H-WK-vzb" kind="presentation" identifier="homeToLogIn" id="5hu-QM-ew4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7GY-BE-3qa">
@@ -107,7 +107,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7r-vG-YlM">
-                                <rect key="frame" x="176" y="115" width="248" height="47"/>
+                                <rect key="frame" x="176" y="122" width="248" height="47"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
                                 <inset key="contentEdgeInsets" minX="13" minY="9" maxX="13" maxY="9"/>
                                 <state key="normal" title="  Log In with Facebook" image="FacebookLogo">
@@ -115,7 +115,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDN-ab-f33">
-                                <rect key="frame" x="177" y="188" width="245" height="44"/>
+                                <rect key="frame" x="177" y="177" width="245" height="44"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
                                 <inset key="contentEdgeInsets" minX="26" minY="9" maxX="26" maxY="9"/>
                                 <state key="normal" title="  Log In with Twitter" image="TwitterLogo">
@@ -123,7 +123,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmQ-dD-gSe">
-                                <rect key="frame" x="173" y="240" width="253" height="46"/>
+                                <rect key="frame" x="173" y="234" width="253" height="46"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
                                 <inset key="contentEdgeInsets" minX="17" minY="9" maxX="17" maxY="9"/>
                                 <state key="normal" title="  Log In with LinkedIn" image="LinkedInLogo">
@@ -131,20 +131,57 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zcy-Nq-Emz">
-                                <rect key="frame" x="174" y="314" width="251" height="43"/>
+                                <rect key="frame" x="174" y="272" width="251" height="43"/>
                                 <inset key="contentEdgeInsets" minX="39" minY="9" maxX="39" maxY="9"/>
                                 <state key="normal" title="  Log In with Email" image="EmailLogo">
                                     <color key="titleColor" red="0.94901967050000002" green="0.98431378599999997" blue="0.98039221759999995" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Don't have an Account?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kL6-dd-uVG">
+                                <rect key="frame" x="215" y="486" width="169" height="18"/>
+                                <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r9N-oN-NaU">
+                                <rect key="frame" x="255" y="512" width="90" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <inset key="contentEdgeInsets" minX="11" minY="5" maxX="11" maxY="5"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="7Up-9g-KsN" kind="presentation" identifier="signUpThroughLogIn" id="sXO-SK-id2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RxY-d1-42n">
+                                <rect key="frame" x="16" y="20" width="48" height="30"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="logInToHome" modalTransitionStyle="crossDissolve" id="Jer-tI-jT7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Log In" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Px7-89-q8t">
+                                <rect key="frame" x="276" y="24" width="53" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="v7r-vG-YlM" firstAttribute="top" secondItem="N1O-fD-EKN" secondAttribute="bottom" constant="37" id="0eE-hE-54q"/>
+                            <constraint firstAttribute="centerX" secondItem="kL6-dd-uVG" secondAttribute="centerX" constant="1" id="49O-qh-Cp2"/>
+                            <constraint firstAttribute="centerX" secondItem="Px7-89-q8t" secondAttribute="centerX" constant="-3" id="KM6-eA-NBJ"/>
                             <constraint firstAttribute="centerX" secondItem="Zcy-Nq-Emz" secondAttribute="centerX" constant="0.5" id="cLL-g3-pGd"/>
                             <constraint firstItem="DDN-ab-f33" firstAttribute="top" secondItem="v7r-vG-YlM" secondAttribute="bottom" constant="26" id="g21-O0-gdx"/>
                             <constraint firstAttribute="centerX" secondItem="vmQ-dD-gSe" secondAttribute="centerX" id="gHV-eO-iyG"/>
+                            <constraint firstAttribute="centerX" secondItem="r9N-oN-NaU" secondAttribute="centerX" constant="-4.5" id="jEG-Vz-h4A"/>
                             <constraint firstAttribute="centerX" secondItem="DDN-ab-f33" secondAttribute="centerX" id="vMO-Xa-Gyv"/>
                             <constraint firstAttribute="centerX" secondItem="v7r-vG-YlM" secondAttribute="centerX" id="x0l-mI-Bbp"/>
                             <constraint firstItem="vmQ-dD-gSe" firstAttribute="top" secondItem="DDN-ab-f33" secondAttribute="bottom" constant="28" id="zEE-OT-Ypc"/>
@@ -154,12 +191,13 @@
                         <outlet property="emailLogInButton" destination="Zcy-Nq-Emz" id="Njy-KA-HOk"/>
                         <outlet property="facebookLogInButton" destination="v7r-vG-YlM" id="Vex-Wp-bM0"/>
                         <outlet property="linkedInLogInButton" destination="vmQ-dD-gSe" id="QRm-Yd-0Sb"/>
+                        <outlet property="signUpThroughLoginView" destination="r9N-oN-NaU" id="wRR-1X-yuj"/>
                         <outlet property="twitterLogInButton" destination="DDN-ab-f33" id="07s-q4-jeg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RcZ-ca-hxL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1955" y="1309"/>
+            <point key="canvasLocation" x="2225" y="1337"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="G1F-cI-ItA">
@@ -174,7 +212,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qc-lk-ZNz">
-                                <rect key="frame" x="166" y="95" width="267" height="47"/>
+                                <rect key="frame" x="166" y="76" width="267" height="47"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
                                 <inset key="contentEdgeInsets" minX="13" minY="9" maxX="13" maxY="9"/>
                                 <state key="normal" title="  Connect with Facebook" image="FacebookLogo">
@@ -182,7 +220,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Zp-Zn-16s">
-                                <rect key="frame" x="168" y="167" width="263" height="44"/>
+                                <rect key="frame" x="168" y="131" width="263" height="44"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
                                 <inset key="contentEdgeInsets" minX="26" minY="9" maxX="26" maxY="9"/>
                                 <state key="normal" title="  Connect with Twitter" image="TwitterLogo">
@@ -190,7 +228,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xln-O2-Rb8">
-                                <rect key="frame" x="164" y="228" width="271" height="46"/>
+                                <rect key="frame" x="164" y="183" width="271" height="46"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
                                 <inset key="contentEdgeInsets" minX="16" minY="9" maxX="16" maxY="9"/>
                                 <state key="normal" title="  Connect with LinkedIn" image="LinkedInLogo">
@@ -198,60 +236,105 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEE-9V-DeH">
-                                <rect key="frame" x="200" y="314" width="272" height="44"/>
+                                <rect key="frame" x="163" y="278" width="272" height="44"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
                                 <inset key="contentEdgeInsets" minX="36" minY="9" maxX="36" maxY="9"/>
                                 <state key="normal" title="  Connect with Email" image="EmailLogo">
                                     <color key="titleColor" red="0.97647064920000004" green="0.99215692280000001" blue="0.99215692280000001" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="rbD-bC-VW3" kind="presentation" identifier="signUpToEmail" id="4ef-as-ncK"/>
+                                </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1U9-Yu-B2K">
+                                <rect key="frame" x="259" y="511" width="80" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <inset key="contentEdgeInsets" minX="11" minY="5" maxX="11" maxY="5"/>
+                                <state key="normal" title=" Log In">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="10H-WK-vzb" kind="presentation" identifier="logInThroughSignUp" id="sX1-wL-EIb"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Already have an Account?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ebD-RW-33o">
+                                <rect key="frame" x="205" y="480" width="200" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gtm-3m-oeh">
+                                <rect key="frame" x="16" y="20" width="48" height="30"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="signUpToHome" modalTransitionStyle="crossDissolve" id="3Dg-35-9GQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8N-dA-EsS">
+                                <rect key="frame" x="266" y="24" width="68" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="1U9-Yu-B2K" secondAttribute="centerX" constant="0.5" id="4JB-qZ-SYP"/>
                             <constraint firstAttribute="centerX" secondItem="2Zp-Zn-16s" secondAttribute="centerX" constant="0.5" id="74G-KI-wbT"/>
                             <constraint firstAttribute="centerX" secondItem="hEE-9V-DeH" secondAttribute="centerX" constant="1" id="7dW-d9-7DE"/>
                             <constraint firstAttribute="centerX" secondItem="Xln-O2-Rb8" secondAttribute="centerX" constant="0.5" id="JZy-Uh-nvp"/>
                             <constraint firstAttribute="centerX" secondItem="5qc-lk-ZNz" secondAttribute="centerX" id="NYm-mR-68s"/>
+                            <constraint firstAttribute="centerX" secondItem="n8N-dA-EsS" secondAttribute="centerX" id="PgP-CA-hd3"/>
                             <constraint firstItem="2Zp-Zn-16s" firstAttribute="top" secondItem="5qc-lk-ZNz" secondAttribute="bottom" constant="26" id="ZDE-Py-yBK"/>
                             <constraint firstItem="Xln-O2-Rb8" firstAttribute="top" secondItem="2Zp-Zn-16s" secondAttribute="bottom" constant="28" id="lP6-r2-CpD"/>
+                            <constraint firstAttribute="centerX" secondItem="ebD-RW-33o" secondAttribute="centerX" constant="-5" id="uGf-Wf-PtK"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="emailSignUpButton" destination="hEE-9V-DeH" id="F5o-n8-tsq"/>
                         <outlet property="facebookSignUpButton" destination="5qc-lk-ZNz" id="UAj-38-6QW"/>
                         <outlet property="linkedInSignUpButton" destination="Xln-O2-Rb8" id="JVi-Zs-lVO"/>
+                        <outlet property="logInButtonInSignUpView" destination="1U9-Yu-B2K" id="VRE-zp-QFs"/>
                         <outlet property="twitterSignUpButton" destination="2Zp-Zn-16s" id="mVh-Xw-sfU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wqI-vp-6ps" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2629" y="670"/>
+            <point key="canvasLocation" x="2851" y="578"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="tP0-cU-gtc">
+        <!--Sign Up By Email-->
+        <scene sceneID="AOf-dT-YAB">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="df3-ag-Gbs" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="GoBack" id="wLB-N6-RKV">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="iZo-fY-44S"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8W2-ga-GSl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController title="Sign Up By Email" id="rbD-bC-VW3" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fY7-JP-hLl"/>
+                        <viewControllerLayoutGuide type="bottom" id="p0x-15-iHN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rSC-vU-YbC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xm8-6l-MM4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1151" y="578"/>
+            <point key="canvasLocation" x="2907" y="-122"/>
         </scene>
     </scenes>
     <resources>
         <image name="EmailLogo" width="25" height="25"/>
         <image name="FacebookLogo" width="29" height="29"/>
-        <image name="GoBack" width="32" height="32"/>
         <image name="LinkedInLogo" width="37" height="28"/>
         <image name="TwitterLogo" width="26" height="22"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="sXO-SK-id2"/>
+        <segue reference="sX1-wL-EIb"/>
+        <segue reference="3Dg-35-9GQ"/>
+    </inferredMetricsTieBreakers>
 </document>
