@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     
         
         // Load the video from the app bundle.
-        let videoURL: NSURL = NSBundle.mainBundle().URLForResource("video", withExtension: "mov")!
+        let videoURL: NSURL = NSBundle.mainBundle().URLForResource("video2", withExtension: "mp4")!
         
         // Create and configure the movie player.
         self.backGroundPlayer = MPMoviePlayerController(contentURL: videoURL)
