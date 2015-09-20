@@ -13,6 +13,7 @@ class LegalPageViewController: UIViewController {
   
     @IBOutlet weak var firstView: UIView!
     
+    
     @IBOutlet weak var secondView: UIView!
     
     @IBOutlet weak var thirdView: UIView!
@@ -38,13 +39,15 @@ class LegalPageViewController: UIViewController {
             firstView.hidden = true
             secondView.hidden = false
             thirdView.hidden = true
-        case 1:
+        case 2:
             firstView.hidden = true
             secondView.hidden = true
             thirdView.hidden = false
         default:
             break;
         }
+        
+      
     }
 
     
