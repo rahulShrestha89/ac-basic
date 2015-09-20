@@ -581,14 +581,6 @@ this User Agreement.</mutableString>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bH-dk-Igp">
-                                                <rect key="frame" x="139" y="502" width="322" height="286"/>
-                                                <string key="text">* We may terminate the Service or use of
-Your Use of the Service</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R79-fO-gr5">
                                                 <rect key="frame" x="71" y="516" width="470" height="44"/>
                                                 <string key="text">* We may terminate the service for any 
@@ -655,16 +647,87 @@ unauthorized use of it.</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Privacy Policy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGM-v7-i2Q">
-                                <rect key="frame" x="243" y="0.0" width="114" height="26"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s1L-lL-VHJ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tiN-vB-g6O" userLabel="ContentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Privacy Policy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGM-v7-i2Q">
+                                                <rect key="frame" x="243" y="0.0" width="114" height="26"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqW-zN-WQN">
+                                                <rect key="frame" x="136" y="54" width="328" height="346"/>
+                                                <mutableString key="text">We respect your concerns about privacy.
+This Privacy Policy describes the types of
+personal infos we collect, how we use
+(and don't use) the information
+and with whom we share it. We also
+desribe, among other things, the measures
+we take to protect the security of
+the information and how you can contact
+us about our privacy responses. We
+recognize that we must
+maintain and use your personal 
+information responsibly. 
+And, when we refer to "personal info"
+, we mean information by which you or 
+the device you are using to connect to the
+internet can be identified. 
+</mutableString>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dhv-KJ-J2n">
+                                                <rect key="frame" x="147" y="352" width="306" height="195"/>
+                                                <string key="text">-Our primary goal in collecting personal
+information is to provide you, the user,
+with an elegant experience on our products.
+All the sensitive informations, along with
+"cookies","device identifiers" or similar
+type of technologies wont be shared
+until provided with a subpeona or
+relevant jurisdiction.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Last Updated: September 17,2015" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Du2-4c-v06">
+                                                <rect key="frame" x="167" y="34" width="266" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="centerX" secondItem="iGM-v7-i2Q" secondAttribute="centerX" id="2qK-NN-ed4"/>
+                                            <constraint firstAttribute="centerX" secondItem="Du2-4c-v06" secondAttribute="centerX" id="XIj-QZ-qkL"/>
+                                            <constraint firstAttribute="centerX" secondItem="Dhv-KJ-J2n" secondAttribute="centerX" id="bqv-bQ-eXq"/>
+                                            <constraint firstAttribute="centerX" secondItem="dqW-zN-WQN" secondAttribute="centerX" constant="-0.5" id="xn9-Qo-k9P"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="tiN-vB-g6O" firstAttribute="top" secondItem="s1L-lL-VHJ" secondAttribute="top" id="FIZ-ul-4cx"/>
+                                    <constraint firstItem="tiN-vB-g6O" firstAttribute="leading" secondItem="s1L-lL-VHJ" secondAttribute="leading" id="QXK-cg-xz5"/>
+                                    <constraint firstAttribute="centerX" secondItem="tiN-vB-g6O" secondAttribute="centerX" id="ToE-x3-wIc"/>
+                                    <constraint firstAttribute="trailing" secondItem="tiN-vB-g6O" secondAttribute="trailing" id="kdH-3x-WCe"/>
+                                    <constraint firstAttribute="bottom" secondItem="tiN-vB-g6O" secondAttribute="bottom" id="twR-ZJ-MgL"/>
+                                    <constraint firstAttribute="centerX" secondItem="tiN-vB-g6O" secondAttribute="centerX" id="ySP-ec-eep"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="iGM-v7-i2Q" secondAttribute="centerX" id="pc6-DR-IeN"/>
+                            <constraint firstItem="s1L-lL-VHJ" firstAttribute="top" secondItem="y15-En-l4d" secondAttribute="top" id="Qxt-bK-fgu"/>
+                            <constraint firstAttribute="trailing" secondItem="s1L-lL-VHJ" secondAttribute="trailing" id="TUM-Zk-Nkt"/>
+                            <constraint firstItem="s1L-lL-VHJ" firstAttribute="leading" secondItem="y15-En-l4d" secondAttribute="leading" id="cPQ-Kz-LXg"/>
+                            <constraint firstItem="dcP-Rv-Nvx" firstAttribute="top" secondItem="s1L-lL-VHJ" secondAttribute="bottom" id="zk6-oq-LIM"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -685,16 +748,66 @@ unauthorized use of it.</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Thanks" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLp-N7-z0T">
-                                <rect key="frame" x="268" y="0.0" width="64" height="24"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lgt-3y-fZu">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CJ5-A4-5oR" userLabel="ContentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Acknowledgements" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPz-BX-Jve">
+                                                <rect key="frame" x="225" y="8" width="151" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HO3-SC-4BF">
+                                                <rect key="frame" x="141" y="37" width="319" height="47"/>
+                                                <string key="text">The application makes use of the 
+following third party libraries:</string>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4tK-fN-GvN">
+                                                <rect key="frame" x="202" y="85" width="197" height="172"/>
+                                                <string key="text">Bolts- (c) 2014, Facebook
+Facebook-iOS-SDK- (c) 2015,Facebook
+LinkedIn-iOS-SDK- (c) 2014, LinkedIn
+Parse- (c) 2014, Facebook
+Twitter-iOS-SDK, (c) 2015, Twitter
+</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="centerX" secondItem="HO3-SC-4BF" secondAttribute="centerX" constant="-0.5" id="4QT-sA-MBg"/>
+                                            <constraint firstAttribute="centerX" secondItem="4tK-fN-GvN" secondAttribute="centerX" constant="-0.5" id="RtM-qN-AiO"/>
+                                            <constraint firstAttribute="centerX" secondItem="KPz-BX-Jve" secondAttribute="centerX" constant="-0.5" id="skk-Rg-FcB"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="CJ5-A4-5oR" firstAttribute="top" secondItem="Lgt-3y-fZu" secondAttribute="top" id="JpI-Zr-zHF"/>
+                                    <constraint firstAttribute="trailing" secondItem="CJ5-A4-5oR" secondAttribute="trailing" id="Qev-Wa-ISc"/>
+                                    <constraint firstItem="CJ5-A4-5oR" firstAttribute="top" secondItem="Lgt-3y-fZu" secondAttribute="top" id="UGJ-fU-8by"/>
+                                    <constraint firstItem="CJ5-A4-5oR" firstAttribute="leading" secondItem="Lgt-3y-fZu" secondAttribute="leading" id="YKO-K3-wuu"/>
+                                    <constraint firstAttribute="bottom" secondItem="CJ5-A4-5oR" secondAttribute="bottom" id="kKi-LV-BNV"/>
+                                    <constraint firstAttribute="centerX" secondItem="CJ5-A4-5oR" secondAttribute="centerX" id="pKw-sx-tn5"/>
+                                    <constraint firstAttribute="trailing" secondItem="CJ5-A4-5oR" secondAttribute="trailing" id="sAt-Py-JId"/>
+                                    <constraint firstItem="CJ5-A4-5oR" firstAttribute="leading" secondItem="Lgt-3y-fZu" secondAttribute="leading" id="x6B-fy-eCv"/>
+                                    <constraint firstAttribute="bottom" secondItem="CJ5-A4-5oR" secondAttribute="bottom" id="yIO-mb-2ga"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="kLp-N7-z0T" secondAttribute="centerX" id="m1Y-QG-97z"/>
+                            <constraint firstItem="5rb-Fd-wPc" firstAttribute="top" secondItem="Lgt-3y-fZu" secondAttribute="bottom" id="3ck-en-l8O"/>
+                            <constraint firstAttribute="trailing" secondItem="Lgt-3y-fZu" secondAttribute="trailing" id="HvY-Nk-H89"/>
+                            <constraint firstItem="Lgt-3y-fZu" firstAttribute="top" secondItem="hIh-vL-PRu" secondAttribute="top" id="Ndc-EA-7R3"/>
+                            <constraint firstItem="Lgt-3y-fZu" firstAttribute="leading" secondItem="hIh-vL-PRu" secondAttribute="leading" id="Oxr-sq-Cza"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
