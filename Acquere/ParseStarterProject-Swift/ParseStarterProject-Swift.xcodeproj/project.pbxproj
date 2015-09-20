@@ -12,6 +12,7 @@
 		534946271BA528B400D64F29 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534946261BA528B400D64F29 /* LogInViewController.swift */; };
 		53774F281BACD0BC00A9CA34 /* video2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 53774F271BACD0BC00A9CA34 /* video2.mp4 */; };
 		537861131BA4D8BF00D2A535 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537861121BA4D8BF00D2A535 /* SignUpViewController.swift */; };
+		5389CFD01BADC18700768D6E /* LegalPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5389CFCF1BADC18700768D6E /* LegalPageViewController.swift */; };
 		53A733D21BABF11200A0232D /* EmailSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A733D11BABF11200A0232D /* EmailSignUpViewController.swift */; };
 		53DACA1B1BA692ED0012D4A1 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DACA171BA692ED0012D4A1 /* Fabric.framework */; };
 		53DACA1C1BA692ED0012D4A1 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DACA181BA692ED0012D4A1 /* TwitterKit.framework */; };
@@ -33,6 +34,7 @@
 		534946261BA528B400D64F29 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		53774F271BACD0BC00A9CA34 /* video2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video2.mp4; sourceTree = "<group>"; };
 		537861121BA4D8BF00D2A535 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		5389CFCF1BADC18700768D6E /* LegalPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegalPageViewController.swift; sourceTree = "<group>"; };
 		53A733D11BABF11200A0232D /* EmailSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailSignUpViewController.swift; sourceTree = "<group>"; };
 		53DACA171BA692ED0012D4A1 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		53DACA181BA692ED0012D4A1 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				81BA814C1A49DA1800E65899 /* HomeViewController.swift */,
 				537861121BA4D8BF00D2A535 /* SignUpViewController.swift */,
 				814C3AC61B69877600E307BB /* Main.storyboard */,
+				5389CFCF1BADC18700768D6E /* LegalPageViewController.swift */,
 				53A733D11BABF11200A0232D /* EmailSignUpViewController.swift */,
 			);
 			path = ParseStarterProject;
@@ -253,6 +256,7 @@
 				534946271BA528B400D64F29 /* LogInViewController.swift in Sources */,
 				537861131BA4D8BF00D2A535 /* SignUpViewController.swift in Sources */,
 				81BA814D1A49DA1800E65899 /* HomeViewController.swift in Sources */,
+				5389CFD01BADC18700768D6E /* LegalPageViewController.swift in Sources */,
 				81BA814B1A49DA1800E65899 /* AppDelegate.swift in Sources */,
 				53A733D21BABF11200A0232D /* EmailSignUpViewController.swift in Sources */,
 			);

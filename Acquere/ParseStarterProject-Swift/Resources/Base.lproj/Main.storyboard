@@ -384,6 +384,9 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="vHe-3D-h36" kind="presentation" identifier="emailSignUpToLegal" id="aya-8F-MYy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tWe-nD-h2t">
                                 <rect key="frame" x="250" y="395" width="100" height="45"/>
@@ -419,6 +422,138 @@
             </objects>
             <point key="canvasLocation" x="2907" y="-122"/>
         </scene>
+        <!--Legal Page View Controller-->
+        <scene sceneID="sed-Po-Ku2">
+            <objects>
+                <viewController id="vHe-3D-h36" customClass="LegalPageViewController" customModule="ParseStarterProject_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cIw-xP-w3C"/>
+                        <viewControllerLayoutGuide type="bottom" id="UZU-9r-Yfu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a0O-2T-wAt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CbN-Ws-RS3">
+                                <rect key="frame" x="16" y="20" width="48" height="33"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="rbD-bC-VW3" kind="presentation" identifier="legalToEmailSignUp" id="GBT-YX-CxM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Legal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sp-KE-smX">
+                                <rect key="frame" x="279" y="25" width="47" height="26"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ONq-XB-wns">
+                                <rect key="frame" x="151" y="64" width="299" height="29"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <segments>
+                                    <segment title="Terms "/>
+                                    <segment title="Privacy Policy"/>
+                                    <segment title="Thanks"/>
+                                </segments>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </segmentedControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oSE-Gu-qzE">
+                                <rect key="frame" x="16" y="123" width="568" height="464"/>
+                                <connections>
+                                    <segue destination="hqU-qT-sj2" kind="embed" id="VYz-ka-xYQ"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vG3-fh-f6q">
+                                <rect key="frame" x="16" y="123" width="568" height="464"/>
+                                <connections>
+                                    <segue destination="qD2-Qu-V05" kind="embed" id="vjI-Xw-ed0"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NlJ-jZ-uXY">
+                                <rect key="frame" x="16" y="123" width="568" height="464"/>
+                                <connections>
+                                    <segue destination="dHL-5r-QDo" kind="embed" id="ABP-qa-jdk"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="7sp-KE-smX" secondAttribute="centerX" constant="-2.5" id="2j3-rI-pFc"/>
+                            <constraint firstAttribute="centerX" secondItem="ONq-XB-wns" secondAttribute="centerX" id="Vlq-Af-Nkb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="firstView" destination="oSE-Gu-qzE" id="FtN-mg-VBS"/>
+                        <outlet property="secondView" destination="vG3-fh-f6q" id="HYD-Zx-Nwn"/>
+                        <outlet property="segmentedControl" destination="ONq-XB-wns" id="Flb-XM-Euw"/>
+                        <outlet property="thirdView" destination="NlJ-jZ-uXY" id="Qnp-DH-jYH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7wd-eJ-pBK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3602" y="-122"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gEj-J5-RH6">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="hqU-qT-sj2" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RaX-1F-bY6"/>
+                        <viewControllerLayoutGuide type="bottom" id="xBV-Ug-o40"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Z9n-SA-fE1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pi7-nW-onN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3602" y="689"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="3Zf-Fs-BsV">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="dHL-5r-QDo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Yk-xS-zvB"/>
+                        <viewControllerLayoutGuide type="bottom" id="dcP-Rv-Nvx"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="y15-En-l4d">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NC5-4c-Af1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4411" y="389"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="3UL-Bn-C3d">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="qD2-Qu-V05" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IVS-u0-gsN"/>
+                        <viewControllerLayoutGuide type="bottom" id="5rb-Fd-wPc"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="hIh-vL-PRu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aSZ-3h-EZQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4411" y="-466"/>
+        </scene>
     </scenes>
     <resources>
         <image name="EmailLogo" width="25" height="25"/>
@@ -429,6 +564,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="sX1-wL-EIb"/>
         <segue reference="Glw-3d-wRa"/>
+        <segue reference="GBT-YX-CxM"/>
         <segue reference="Jer-tI-jT7"/>
     </inferredMetricsTieBreakers>
 </document>
