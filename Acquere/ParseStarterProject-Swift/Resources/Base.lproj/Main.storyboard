@@ -307,7 +307,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wqI-vp-6ps" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2658" y="646"/>
+            <point key="canvasLocation" x="2798" y="556"/>
         </scene>
         <!--Sign Up By Email-->
         <scene sceneID="AOf-dT-YAB">
@@ -358,12 +358,12 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V4v-OE-UCc">
                                 <rect key="frame" x="188" y="259" width="225" height="30"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="21"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LZb-pY-VC0">
                                 <rect key="frame" x="188" y="297" width="225" height="30"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="21"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="By joining Acquere, you agree to the" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csg-mL-oTj">
                                 <rect key="frame" x="164" y="448" width="273" height="21"/>
@@ -396,6 +396,9 @@
                                     <color key="titleColor" red="0.94901967050000002" green="0.98431378599999997" blue="0.98039221759999995" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="signUpButtonTapped:" destination="rbD-bC-VW3" eventType="touchUpInside" id="3LC-SS-qLh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -415,6 +418,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="confirmPassword" destination="LZb-pY-VC0" id="Y4x-pU-Qkw"/>
+                        <outlet property="emailAddress" destination="Ud9-UP-cBg" id="KSL-x2-2Bz"/>
+                        <outlet property="firstName" destination="IXi-Xu-VSn" id="cAv-ed-6wh"/>
+                        <outlet property="lastName" destination="hAJ-Y7-dTM" id="Ieh-Sl-TIK"/>
+                        <outlet property="password" destination="V4v-OE-UCc" id="T9k-b3-EYx"/>
                         <outlet property="signUpButton" destination="tWe-nD-h2t" id="ctE-mi-2be"/>
                     </connections>
                 </viewController>
@@ -561,7 +569,7 @@ certain terms and conditions as follows:
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5I-Rr-LzN">
                                                 <rect key="frame" x="153" y="182" width="307" height="326"/>
-                                                <mutableString key="text">* We May Modify the terms of this User 
+                                                <string key="text">* We May Modify the terms of this User 
 agreement FromTime to Time: We reserve
  the right to change the terms of this User 
 agreement or to modify any features of 
@@ -576,7 +584,7 @@ as they are posted. Unless explicitly stated
 otherwise, any new features or
 functionaltiy that augment or enhance 
 our Service shall be subject to
-this User Agreement.</mutableString>
+this User Agreement.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
@@ -661,7 +669,7 @@ unauthorized use of it.</string>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqW-zN-WQN">
                                                 <rect key="frame" x="136" y="54" width="328" height="346"/>
-                                                <mutableString key="text">We respect your concerns about privacy.
+                                                <string key="text">We respect your concerns about privacy.
 This Privacy Policy describes the types of
 personal infos we collect, how we use
 (and don't use) the information
@@ -677,7 +685,7 @@ And, when we refer to "personal info"
 , we mean information by which you or 
 the device you are using to connect to the
 internet can be identified. 
-</mutableString>
+</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
@@ -824,9 +832,9 @@ Twitter-iOS-SDK, (c) 2015, Twitter
         <image name="TwitterLogo" width="26" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="sX1-wL-EIb"/>
+        <segue reference="3Dg-35-9GQ"/>
         <segue reference="Glw-3d-wRa"/>
         <segue reference="GBT-YX-CxM"/>
-        <segue reference="Jer-tI-jT7"/>
+        <segue reference="sX1-wL-EIb"/>
     </inferredMetricsTieBreakers>
 </document>
