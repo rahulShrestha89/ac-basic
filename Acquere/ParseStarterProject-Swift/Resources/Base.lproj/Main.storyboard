@@ -22,19 +22,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ACQUERE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gkd-xB-aac">
-                                <rect key="frame" x="175" y="169" width="249" height="64"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="277" id="8hn-8b-0OM"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="277" id="9cS-RH-R4w"/>
-                                    <constraint firstAttribute="height" constant="64" id="QK6-ll-28g"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="64" id="Rcc-kf-qm4"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="b5E-s1-GHv"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="DKLiquidEmbrace" family="DK Liquid Embrace" pointSize="64"/>
-                                <color key="textColor" red="0.25098040699958801" green="0.69411766529083252" blue="0.90980398654937744" alpha="1" colorSpace="deviceRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3nQ-ua-0SM">
                                 <rect key="frame" x="207" y="474" width="185" height="49"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
@@ -66,12 +53,25 @@
                                     <color key="titleShadowColor" red="0.96862751250000001" green="0.98823535439999999" blue="0.96470594409999999" alpha="1" colorSpace="deviceRGB"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ACQUERE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gkd-xB-aac">
+                                <rect key="frame" x="176" y="82" width="249" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="277" id="8hn-8b-0OM"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="277" id="9cS-RH-R4w"/>
+                                    <constraint firstAttribute="height" constant="64" id="QK6-ll-28g"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="64" id="Rcc-kf-qm4"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="b5E-s1-GHv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DKLiquidEmbrace" family="DK Liquid Embrace" pointSize="64"/>
+                                <color key="textColor" red="0.25098040699958801" green="0.69411766529083252" blue="0.90980398654937744" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="E9R-JV-vKP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="505" id="1aN-oK-VnB"/>
                             <constraint firstItem="7GY-BE-3qa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="505" id="5is-hD-eXj"/>
-                            <constraint firstItem="Gkd-xB-aac" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="149" id="Ghh-bl-W9y"/>
+                            <constraint firstItem="Gkd-xB-aac" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="69" id="Ghh-bl-W9y"/>
                             <constraint firstAttribute="centerX" secondItem="3nQ-ua-0SM" secondAttribute="centerX" id="UId-GX-onu"/>
                             <constraint firstItem="E9R-JV-vKP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="VzC-ce-THg"/>
                             <constraint firstAttribute="centerX" secondItem="Gkd-xB-aac" secondAttribute="centerX" id="btg-1q-Ojn"/>
@@ -399,6 +399,12 @@
                                     <action selector="signUpButtonTapped:" destination="rbD-bC-VW3" eventType="touchUpInside" id="3LC-SS-qLh"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="*Password must be greater than 5 characters" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rf4-Ea-Owd">
+                                <rect key="frame" x="154" y="328" width="285" height="21"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="0.010264175666534847" green="0.031448854774194852" blue="0.044625946969697017" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -410,6 +416,7 @@
                             <constraint firstAttribute="centerX" secondItem="hAJ-Y7-dTM" secondAttribute="centerX" constant="-0.5" id="awl-5N-ECZ"/>
                             <constraint firstAttribute="centerX" secondItem="iql-5I-Lpb" secondAttribute="centerX" constant="-13" id="fvI-vE-jNx"/>
                             <constraint firstAttribute="centerX" secondItem="V4v-OE-UCc" secondAttribute="centerX" constant="-0.5" id="gdx-UO-Lkc"/>
+                            <constraint firstAttribute="centerX" secondItem="rf4-Ea-Owd" secondAttribute="centerX" constant="5.5" id="hRj-Wf-xpA"/>
                             <constraint firstAttribute="centerX" secondItem="tWe-nD-h2t" secondAttribute="centerX" constant="-6" id="jCo-oc-3Do"/>
                             <constraint firstAttribute="centerX" secondItem="tWe-nD-h2t" secondAttribute="centerX" constant="4" id="qB9-qS-3ZN"/>
                             <constraint firstAttribute="centerX" secondItem="y7F-U1-jQN" secondAttribute="centerX" id="rCk-cT-Mab"/>
@@ -831,9 +838,9 @@ Twitter-iOS-SDK, (c) 2015, Twitter
         <image name="TwitterLogo" width="26" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3Dg-35-9GQ"/>
-        <segue reference="Glw-3d-wRa"/>
         <segue reference="GBT-YX-CxM"/>
-        <segue reference="sX1-wL-EIb"/>
+        <segue reference="3Dg-35-9GQ"/>
+        <segue reference="WWa-jn-ukK"/>
+        <segue reference="5hu-QM-ew4"/>
     </inferredMetricsTieBreakers>
 </document>

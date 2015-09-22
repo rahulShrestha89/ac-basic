@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftValidator
+import Parse
 
 
 class EmailSignUpViewController: UIViewController{
@@ -58,10 +59,31 @@ class EmailSignUpViewController: UIViewController{
             var passwordErrorAlert = UIAlertController(title: "Incorrect Password Combination", message: "Passwords do not match. Try Again?", preferredStyle: UIAlertControllerStyle.Alert)
             passwordErrorAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
             self.presentViewController(passwordErrorAlert, animated: true, completion: nil);
+        } else{
+            var user = PFUser()
+            user.email = emailAddressTextField.text
+            user.password = passwordTextField.text
+            user.username = emailAddressTextField.text
+            user["firstName"] = firstNameTextField.text
+            user["lastName"] = lastNameTextField.text
+            
+            user.signUpInBackgroundWithBlock({ (success: Bool, error: NSError?) -> Void in
+                if error != nil{
+                    var error = UIAlertController(title: "failed", message: "failed", preferredStyle: UIAlertControllerStyle.Alert)
+                    error.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                    self.presentViewController(error, animated: true, completion: nil);
+                } else{
+                    var success = UIAlertController(title: "Signed Up", message: "You have been successfully signed up!", preferredStyle: UIAlertControllerStyle.Alert)
+                    success.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                    self.presentViewController(success, animated: true, completion: nil);
+                }
+            })
+            
         }
         
     }
     
+ 
     
     func isValidEmail(testStr:String) -> Bool {
         
