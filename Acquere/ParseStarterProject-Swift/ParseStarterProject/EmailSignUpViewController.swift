@@ -20,12 +20,14 @@ class EmailSignUpViewController: UIViewController{
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     
+    @IBOutlet weak var signUpActivityIndicator: UIActivityIndicatorView!
     let validator = Validator()
     override func viewDidLoad() {
         super.viewDidLoad()
        
          decorateButton(signUpButton, color: UIColor(red: 0.114, green: 0.914, blue: 0.714, alpha: 1))
         
+        signUpActivityIndicator.hidden=true
         
     }
     
@@ -60,22 +62,34 @@ class EmailSignUpViewController: UIViewController{
             passwordErrorAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
             self.presentViewController(passwordErrorAlert, animated: true, completion: nil);
         } else{
+            signUpActivityIndicator.hidden=false
+            signUpActivityIndicator.startAnimating()
+            UIApplication.sharedApplication().beginIgnoringInteractionEvents()
             var user = PFUser()
             user.email = emailAddressTextField.text
             user.password = passwordTextField.text
             user.username = emailAddressTextField.text
             user["firstName"] = firstNameTextField.text
             user["lastName"] = lastNameTextField.text
-            
             user.signUpInBackgroundWithBlock({ (success: Bool, error: NSError?) -> Void in
                 if error != nil{
                     var error = UIAlertController(title: "failed", message: "failed", preferredStyle: UIAlertControllerStyle.Alert)
                     error.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
                     self.presentViewController(error, animated: true, completion: nil);
                 } else{
-                    var success = UIAlertController(title: "Signed Up", message: "You have been successfully signed up!", preferredStyle: UIAlertControllerStyle.Alert)
-                    success.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
-                    self.presentViewController(success, animated: true, completion: nil);
+                    let seconds = 4.0
+                    let delay = seconds * Double(NSEC_PER_SEC)  // nanoseconds per seconds
+                    var dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+                    
+                    dispatch_after(dispatchTime, dispatch_get_main_queue(), {
+                        self.signUpActivityIndicator.hidden=true
+                        UIApplication.sharedApplication().endIgnoringInteractionEvents()
+                        var success = UIAlertController(title: "Signed Up", message: "You have been successfully signed up!", preferredStyle: UIAlertControllerStyle.Alert)
+                        success.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                        self.presentViewController(success, animated: true, completion: nil);
+                        
+                    })
+                  
                 }
             })
             

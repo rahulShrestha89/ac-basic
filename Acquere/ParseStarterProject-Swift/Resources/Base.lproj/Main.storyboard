@@ -342,12 +342,12 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IXi-Xu-VSn">
                                 <rect key="frame" x="210" y="93" width="181" height="30"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="21"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hAJ-Y7-dTM">
                                 <rect key="frame" x="210" y="147" width="181" height="30"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="21"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ud9-UP-cBg">
                                 <rect key="frame" x="170" y="202" width="260" height="30"/>
@@ -405,6 +405,14 @@
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="0.010264175666534847" green="0.031448854774194852" blue="0.044625946969697017" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="x8X-9o-ydf">
+                                <rect key="frame" x="290" y="357" width="20" height="20"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="0mc-iP-9gY"/>
+                                </constraints>
+                                <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -419,6 +427,7 @@
                             <constraint firstAttribute="centerX" secondItem="rf4-Ea-Owd" secondAttribute="centerX" constant="5.5" id="hRj-Wf-xpA"/>
                             <constraint firstAttribute="centerX" secondItem="tWe-nD-h2t" secondAttribute="centerX" constant="-6" id="jCo-oc-3Do"/>
                             <constraint firstAttribute="centerX" secondItem="tWe-nD-h2t" secondAttribute="centerX" constant="4" id="qB9-qS-3ZN"/>
+                            <constraint firstAttribute="centerX" secondItem="x8X-9o-ydf" secondAttribute="centerX" id="qZe-0S-5cr"/>
                             <constraint firstAttribute="centerX" secondItem="y7F-U1-jQN" secondAttribute="centerX" id="rCk-cT-Mab"/>
                             <constraint firstAttribute="centerX" secondItem="IXi-Xu-VSn" secondAttribute="centerX" constant="-0.5" id="uJK-pa-MIG"/>
                         </constraints>
@@ -429,6 +438,7 @@
                         <outlet property="firstNameTextField" destination="IXi-Xu-VSn" id="NCb-GN-nlU"/>
                         <outlet property="lastNameTextField" destination="hAJ-Y7-dTM" id="OwW-ye-SiD"/>
                         <outlet property="passwordTextField" destination="V4v-OE-UCc" id="LCr-Dh-cLu"/>
+                        <outlet property="signUpActivityIndicator" destination="x8X-9o-ydf" id="rID-D9-zf5"/>
                         <outlet property="signUpButton" destination="tWe-nD-h2t" id="ctE-mi-2be"/>
                     </connections>
                 </viewController>
