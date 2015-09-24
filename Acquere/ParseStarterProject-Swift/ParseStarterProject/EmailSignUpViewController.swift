@@ -106,6 +106,7 @@ class EmailSignUpViewController: UIViewController{
                         var success = UIAlertController(title: "Congratulations!", message: "Please Check your email for account verification.", preferredStyle: UIAlertControllerStyle.Alert)
                         success.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action: UIAlertAction!) -> () in
                             self.performSegueWithIdentifier("signUpByEmailToLogIn", sender: nil)
+                            PFUser.logOut()
                         }))
                         self.presentViewController(success, animated: true, completion: nil);
                         
