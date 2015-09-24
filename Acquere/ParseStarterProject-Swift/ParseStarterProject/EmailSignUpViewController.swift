@@ -50,19 +50,23 @@ class EmailSignUpViewController: UIViewController{
             var blankFieldAlert = UIAlertController(title: "Empty Form Field Error", message: "All the Entries are required.", preferredStyle: UIAlertControllerStyle.Alert)
             blankFieldAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
             self.presentViewController(blankFieldAlert, animated: true, completion: nil);
-        } else if !isValidEmail(emailAddressTextField.text){
+        }
+        else if !isValidEmail(emailAddressTextField.text){
             var emailErrorAlert = UIAlertController(title: "Incorrect Email Format", message: "Please Enter a Valid Email Address.", preferredStyle: UIAlertControllerStyle.Alert)
             emailErrorAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
             self.presentViewController(emailErrorAlert, animated: true, completion: nil);
-        } else if passwordCount < 6 {
+        }
+        else if passwordCount < 6 {
             var passwordLengthErrorAlert = UIAlertController(title: "Weak Password", message: "Password must be greater than 5 characters. Try Again?", preferredStyle: UIAlertControllerStyle.Alert)
             passwordLengthErrorAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
             self.presentViewController(passwordLengthErrorAlert, animated: true, completion: nil);
-        } else if passwordTextField.text != confirmPasswordTextField.text{
+        }
+        else if passwordTextField.text != confirmPasswordTextField.text{
             var passwordErrorAlert = UIAlertController(title: "Incorrect Password Combination", message: "Passwords do not match. Try Again?", preferredStyle: UIAlertControllerStyle.Alert)
             passwordErrorAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
             self.presentViewController(passwordErrorAlert, animated: true, completion: nil);
-        } else{
+        }
+        else{
             let bounds = UIScreen.mainScreen().bounds
             let myActivityIndicatorView: DTIActivityIndicatorView = DTIActivityIndicatorView(frame: CGRect(x:bounds.size.width/2-60, y:bounds.size.height/2+40, width:120.0, height:120.0))
             self.view.addSubview(myActivityIndicatorView)
@@ -81,23 +85,32 @@ class EmailSignUpViewController: UIViewController{
             user["lastName"] = lastNameTextField.text
             user.signUpInBackgroundWithBlock({ (success: Bool, error: NSError?) -> Void in
                 if error != nil{
-                    var error = UIAlertController(title: "failed", message: "failed", preferredStyle: UIAlertControllerStyle.Alert)
-                    error.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                    var error = UIAlertController(title: "Multiple Account", message: "Account Alreday Registered with this Email.", preferredStyle: UIAlertControllerStyle.Alert)
+                    error.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action: UIAlertAction!) -> () in
+                        self.performSegueWithIdentifier("signUpByEmailToMainSignUp", sender: nil)
+                    }))
                     self.presentViewController(error, animated: true, completion: nil);
-                } else{
-                    let seconds = 5.0
-                    let delay = seconds * Double(NSEC_PER_SEC)  // nanoseconds per seconds
-                    var dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
-                    
-                    dispatch_after(dispatchTime, dispatch_get_main_queue(), {
+                    self.view?.backgroundColor = UIColor(red: 0.957, green: 0.263, blue: 0.212, alpha: 1)
+                    UIApplication.sharedApplication().endIgnoringInteractionEvents()
+                    myActivityIndicatorView.stopActivity()
+                }
+                else{
+                    let activitySeconds = 5.0
+                    let activityDelay = activitySeconds * Double(NSEC_PER_SEC)  // nanoseconds per seconds
+                    var activityDispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(activityDelay))
+                    // present this after //seconds//
+                    dispatch_after(activityDispatchTime, dispatch_get_main_queue(), {
                         myActivityIndicatorView.stopActivity()
                         UIApplication.sharedApplication().endIgnoringInteractionEvents()
                         self.view?.backgroundColor = UIColor(red: 0.302, green: 0.714, blue: 0.675, alpha: 1)
-                        var success = UIAlertController(title: "Signed Up", message: "You have been successfully signed up!", preferredStyle: UIAlertControllerStyle.Alert)
-                        success.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                        var success = UIAlertController(title: "Congratulations!", message: "Please Check your email for account verification.", preferredStyle: UIAlertControllerStyle.Alert)
+                        success.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action: UIAlertAction!) -> () in
+                            self.performSegueWithIdentifier("signUpByEmailToLogIn", sender: nil)
+                        }))
                         self.presentViewController(success, animated: true, completion: nil);
                         
                     })
+                    
                   
                 }
             })
@@ -105,8 +118,6 @@ class EmailSignUpViewController: UIViewController{
         }
         
     }
-    
- 
     
     func isValidEmail(testStr:String) -> Bool {
         

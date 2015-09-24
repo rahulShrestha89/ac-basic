@@ -91,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1963" y="578"/>
+            <point key="canvasLocation" x="1559" y="458"/>
         </scene>
         <!--Log In-->
         <scene sceneID="HlV-3J-EC8">
@@ -197,7 +197,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RcZ-ca-hxL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2225" y="1337"/>
+            <point key="canvasLocation" x="1924" y="1187"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="G1F-cI-ItA">
@@ -306,7 +306,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wqI-vp-6ps" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2798" y="556"/>
+            <point key="canvasLocation" x="2770" y="536"/>
         </scene>
         <!--Sign Up By Email-->
         <scene sceneID="AOf-dT-YAB">
@@ -440,11 +440,13 @@
                         <outlet property="passwordTextField" destination="V4v-OE-UCc" id="LCr-Dh-cLu"/>
                         <outlet property="signUpActivityIndicator" destination="x8X-9o-ydf" id="rID-D9-zf5"/>
                         <outlet property="signUpButton" destination="tWe-nD-h2t" id="ctE-mi-2be"/>
+                        <segue destination="10H-WK-vzb" kind="presentation" identifier="signUpByEmailToLogIn" id="PJd-Lp-zJN"/>
+                        <segue destination="7Up-9g-KsN" kind="presentation" identifier="signUpByEmailToMainSignUp" id="C2h-LO-Rdt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xm8-6l-MM4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2907" y="-122"/>
+            <point key="canvasLocation" x="2318" y="-266"/>
         </scene>
         <!--Legal Page View Controller-->
         <scene sceneID="sed-Po-Ku2">
@@ -534,7 +536,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7wd-eJ-pBK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3602" y="-122"/>
+            <point key="canvasLocation" x="3332" y="-212"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="gEj-J5-RH6">
@@ -545,11 +547,11 @@
                         <viewControllerLayoutGuide type="bottom" id="xBV-Ug-o40"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Z9n-SA-fE1">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="Q4K-EO-6kt">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="487"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X9l-cx-h7U" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -657,7 +659,7 @@ unauthorized use of it.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pi7-nW-onN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3602" y="689"/>
+            <point key="canvasLocation" x="3718" y="656.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="3Zf-Fs-BsV">
@@ -668,17 +670,17 @@ unauthorized use of it.</string>
                         <viewControllerLayoutGuide type="bottom" id="dcP-Rv-Nvx"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="y15-En-l4d">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s1L-lL-VHJ">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="487"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tiN-vB-g6O" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="568" height="600"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Privacy Policy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGM-v7-i2Q">
-                                                <rect key="frame" x="243" y="0.0" width="114" height="26"/>
+                                                <rect key="frame" x="227" y="0.0" width="114" height="26"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
@@ -758,7 +760,7 @@ relevant jurisdiction.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NC5-4c-Af1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4411" y="389"/>
+            <point key="canvasLocation" x="4347" y="356.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="3UL-Bn-C3d">
@@ -769,17 +771,17 @@ relevant jurisdiction.</string>
                         <viewControllerLayoutGuide type="bottom" id="5rb-Fd-wPc"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="hIh-vL-PRu">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lgt-3y-fZu">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="487"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CJ5-A4-5oR" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="568" height="600"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Acknowledgements" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPz-BX-Jve">
-                                                <rect key="frame" x="225" y="8" width="151" height="21"/>
+                                                <rect key="frame" x="209" y="8" width="151" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
@@ -793,8 +795,9 @@ following third party libraries:</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4tK-fN-GvN">
-                                                <rect key="frame" x="202" y="85" width="197" height="172"/>
+                                                <rect key="frame" x="202" y="85" width="197" height="216"/>
                                                 <string key="text">Bolts- (c) 2014, Facebook
+DTIActivityIndicator-(c) 2013, dtissera
 Facebook-iOS-SDK- (c) 2015,Facebook
 LinkedIn-iOS-SDK- (c) 2014, LinkedIn
 Parse- (c) 2014, Facebook
@@ -838,7 +841,7 @@ Twitter-iOS-SDK, (c) 2015, Twitter
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aSZ-3h-EZQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4411" y="-466"/>
+            <point key="canvasLocation" x="4347" y="-268.5"/>
         </scene>
     </scenes>
     <resources>
@@ -848,9 +851,9 @@ Twitter-iOS-SDK, (c) 2015, Twitter
         <image name="TwitterLogo" width="26" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GBT-YX-CxM"/>
+        <segue reference="4ef-as-ncK"/>
+        <segue reference="C2h-LO-Rdt"/>
         <segue reference="3Dg-35-9GQ"/>
-        <segue reference="WWa-jn-ukK"/>
-        <segue reference="5hu-QM-ew4"/>
+        <segue reference="sX1-wL-EIb"/>
     </inferredMetricsTieBreakers>
 </document>
