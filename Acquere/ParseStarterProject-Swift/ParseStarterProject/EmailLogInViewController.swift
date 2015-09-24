@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import DTIActivityIndicator
 
 class EmailLogInViewController: UIViewController {
 
@@ -65,9 +66,37 @@ class EmailLogInViewController: UIViewController {
                     loginFail.addAction(UIAlertAction(title: "Gotcha!", style: .Default, handler: nil))
                     self.presentViewController(loginFail, animated: true, completion: nil);
                 }else{
-                    var loginSuccess = UIAlertController(title: "LogIn YEEEE", message: "all good!!", preferredStyle: UIAlertControllerStyle.Alert)
-                    loginSuccess.addAction(UIAlertAction(title: "Gotcha!", style: .Default, handler: nil))
-                    self.presentViewController(loginSuccess, animated: true, completion: nil);
+                    
+                    let bounds = UIScreen.mainScreen().bounds
+                    let myActivityIndicatorView: DTIActivityIndicatorView = DTIActivityIndicatorView(frame: CGRect(x:bounds.size.width/2-60, y:bounds.size.height/2-80, width:120.0, height:120.0))
+                    self.view.addSubview(myActivityIndicatorView)
+                    myActivityIndicatorView.indicatorColor = UIColor(red: 0.259, green: 0.647, blue: 0.961, alpha: 1)
+                    
+                    myActivityIndicatorView.indicatorStyle = DTIIndicatorStyle.convInv(.chasingDots)
+                    myActivityIndicatorView.startActivity()
+                    self.view?.backgroundColor = UIColor(white: 1, alpha: 0.8)
+                    UIApplication.sharedApplication().beginIgnoringInteractionEvents()
+                    
+                    
+                    let activitySeconds = 5.0
+                    let activityDelay = activitySeconds * Double(NSEC_PER_SEC)  // nanoseconds per seconds
+                    var activityDispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(activityDelay))
+                    // present this after //seconds//
+                    dispatch_after(activityDispatchTime, dispatch_get_main_queue(), {
+                        myActivityIndicatorView.stopActivity()
+                        UIApplication.sharedApplication().endIgnoringInteractionEvents()
+                        self.view?.backgroundColor = UIColor(red: 0.082, green: 0.396, blue: 0.753, alpha: 1)
+                        
+                        var loginSuccess = UIAlertController(title: "Successful LogIn", message: "All good!!", preferredStyle: UIAlertControllerStyle.Alert)
+                        
+                        loginSuccess.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action: UIAlertAction!) -> () in
+                            //self.performSegueWithIdentifier("signUpByEmailToLogIn", sender: nil)
+                            
+                        }))
+                        
+                        self.presentViewController(loginSuccess, animated: true, completion: nil);
+                        
+                    })
                 }
             }
         }
