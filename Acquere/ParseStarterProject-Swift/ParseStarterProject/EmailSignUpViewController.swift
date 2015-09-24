@@ -9,6 +9,7 @@
 import UIKit
 import SwiftValidator
 import Parse
+import DTIActivityIndicator
 
 
 class EmailSignUpViewController: UIViewController{
@@ -62,9 +63,16 @@ class EmailSignUpViewController: UIViewController{
             passwordErrorAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
             self.presentViewController(passwordErrorAlert, animated: true, completion: nil);
         } else{
-            signUpActivityIndicator.hidden=false
-            signUpActivityIndicator.startAnimating()
+            let bounds = UIScreen.mainScreen().bounds
+            let myActivityIndicatorView: DTIActivityIndicatorView = DTIActivityIndicatorView(frame: CGRect(x:bounds.size.width/2-60, y:bounds.size.height/2+40, width:120.0, height:120.0))
+            self.view.addSubview(myActivityIndicatorView)
+            myActivityIndicatorView.indicatorColor = UIColor(red: 0.114, green: 0.914, blue: 0.714, alpha: 1)
+            
+            myActivityIndicatorView.indicatorStyle = DTIIndicatorStyle.convInv(.chasingDots)
+            myActivityIndicatorView.startActivity()
+
             UIApplication.sharedApplication().beginIgnoringInteractionEvents()
+            view?.backgroundColor = UIColor(white: 1, alpha: 0.8)
             var user = PFUser()
             user.email = emailAddressTextField.text
             user.password = passwordTextField.text
@@ -77,13 +85,14 @@ class EmailSignUpViewController: UIViewController{
                     error.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
                     self.presentViewController(error, animated: true, completion: nil);
                 } else{
-                    let seconds = 4.0
+                    let seconds = 5.0
                     let delay = seconds * Double(NSEC_PER_SEC)  // nanoseconds per seconds
                     var dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
                     
                     dispatch_after(dispatchTime, dispatch_get_main_queue(), {
-                        self.signUpActivityIndicator.hidden=true
+                        myActivityIndicatorView.stopActivity()
                         UIApplication.sharedApplication().endIgnoringInteractionEvents()
+                        self.view?.backgroundColor = UIColor(red: 0.302, green: 0.714, blue: 0.675, alpha: 1)
                         var success = UIAlertController(title: "Signed Up", message: "You have been successfully signed up!", preferredStyle: UIAlertControllerStyle.Alert)
                         success.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
                         self.presentViewController(success, animated: true, completion: nil);
