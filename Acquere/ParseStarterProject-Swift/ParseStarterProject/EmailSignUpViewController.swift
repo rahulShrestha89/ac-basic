@@ -26,8 +26,7 @@ class EmailSignUpViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
        
-         decorateButton(signUpButton, color: UIColor(red: 0.114, green: 0.914, blue: 0.714, alpha: 1))
-        
+        decorateButton(signUpButton, color: UIColor(red: 0.114, green: 0.914, blue: 0.714, alpha: 1))
         signUpActivityIndicator.hidden=true
         
     }
