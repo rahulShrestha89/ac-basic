@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		530CB11A1BAABCC70004200C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 814C3AC61B69877600E307BB /* Main.storyboard */; };
-		5310588B1BB3B3B20004C2A2 /* DTIActivityIndicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 531058841BB3B30B0004C2A2 /* DTIActivityIndicator.framework */; };
-		5310588C1BB3B3CE0004C2A2 /* DTIActivityIndicator.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 531058841BB3B30B0004C2A2 /* DTIActivityIndicator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5330B4271BB4DA2100404AB3 /* DTIActivityIndicator.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 5330B4221BB4D9F900404AB3 /* DTIActivityIndicator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5338FBFE1B93E8CD00326E38 /* DK Liquid Embrace.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5338FBFD1B93E8CD00326E38 /* DK Liquid Embrace.ttf */; };
 		534946271BA528B400D64F29 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534946261BA528B400D64F29 /* LogInViewController.swift */; };
 		53774F281BACD0BC00A9CA34 /* video2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 53774F271BACD0BC00A9CA34 /* video2.mp4 */; };
@@ -34,23 +33,23 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		531058831BB3B30B0004C2A2 /* PBXContainerItemProxy */ = {
+		5330B4211BB4D9F900404AB3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5310587E1BB3B30B0004C2A2 /* DTIActivityIndicator.xcodeproj */;
+			containerPortal = 5330B41C1BB4D9F900404AB3 /* DTIActivityIndicator.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 25FC0C741A04318500F61053;
 			remoteInfo = DTIActivityIndicator;
 		};
-		531058851BB3B30B0004C2A2 /* PBXContainerItemProxy */ = {
+		5330B4231BB4D9F900404AB3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5310587E1BB3B30B0004C2A2 /* DTIActivityIndicator.xcodeproj */;
+			containerPortal = 5330B41C1BB4D9F900404AB3 /* DTIActivityIndicator.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 25FC0C7F1A04318500F61053;
 			remoteInfo = DTIActivityIndicatorTests;
 		};
-		531058871BB3B34C0004C2A2 /* PBXContainerItemProxy */ = {
+		5330B4251BB4DA1A00404AB3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5310587E1BB3B30B0004C2A2 /* DTIActivityIndicator.xcodeproj */;
+			containerPortal = 5330B41C1BB4D9F900404AB3 /* DTIActivityIndicator.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 25FC0C731A04318500F61053;
 			remoteInfo = DTIActivityIndicator;
@@ -64,7 +63,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				5310588C1BB3B3CE0004C2A2 /* DTIActivityIndicator.framework in Copy Frameworks */,
+				5330B4271BB4DA2100404AB3 /* DTIActivityIndicator.framework in Copy Frameworks */,
 			);
 			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,7 +73,7 @@
 /* Begin PBXFileReference section */
 		03D3C717D5E89CEC45F2965F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "../Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		4ADA1A412E6937BCF9A90CCC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "../Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		5310587E1BB3B30B0004C2A2 /* DTIActivityIndicator.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DTIActivityIndicator.xcodeproj; path = "../../../Downloads/DTIActivityIndicatorView-Swift-master/DTIActivityIndicator.xcodeproj"; sourceTree = "<group>"; };
+		5330B41C1BB4D9F900404AB3 /* DTIActivityIndicator.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DTIActivityIndicator.xcodeproj; path = "../../../Downloads/DTIActivityIndicatorView-Swift-master/DTIActivityIndicator.xcodeproj"; sourceTree = "<group>"; };
 		5338FBFD1B93E8CD00326E38 /* DK Liquid Embrace.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DK Liquid Embrace.ttf"; sourceTree = "<group>"; };
 		534946261BA528B400D64F29 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		53774F271BACD0BC00A9CA34 /* video2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video2.mp4; sourceTree = "<group>"; };
@@ -109,7 +108,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5310588B1BB3B3B20004C2A2 /* DTIActivityIndicator.framework in Frameworks */,
 				53DACA1B1BA692ED0012D4A1 /* Fabric.framework in Frameworks */,
 				81BA817F1A49E0F000E65899 /* libstdc++.6.dylib in Frameworks */,
 				81BA817B1A49E0E500E65899 /* SystemConfiguration.framework in Frameworks */,
@@ -126,11 +124,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5310587F1BB3B30B0004C2A2 /* Products */ = {
+		5330B41D1BB4D9F900404AB3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				531058841BB3B30B0004C2A2 /* DTIActivityIndicator.framework */,
-				531058861BB3B30B0004C2A2 /* DTIActivityIndicatorTests.xctest */,
+				5330B4221BB4D9F900404AB3 /* DTIActivityIndicator.framework */,
+				5330B4241BB4D9F900404AB3 /* DTIActivityIndicatorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -148,11 +146,11 @@
 		81BA813C1A49DA1800E65899 = {
 			isa = PBXGroup;
 			children = (
+				5330B41C1BB4D9F900404AB3 /* DTIActivityIndicator.xcodeproj */,
 				81BA81471A49DA1800E65899 /* ParseStarterProject */,
 				814C3AC51B69877600E307BB /* Resources */,
 				81BA816A1A49DB5600E65899 /* Frameworks */,
 				81BA81461A49DA1800E65899 /* Products */,
-				5310587E1BB3B30B0004C2A2 /* DTIActivityIndicator.xcodeproj */,
 				D3F7EA9B61629C4B93D6B4B6 /* Pods */,
 			);
 			sourceTree = "<group>";
@@ -239,7 +237,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				531058881BB3B34C0004C2A2 /* PBXTargetDependency */,
+				5330B4261BB4DA1A00404AB3 /* PBXTargetDependency */,
 			);
 			name = "ParseStarterProject-Swift";
 			productName = ParseStarterProject;
@@ -274,8 +272,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 5310587F1BB3B30B0004C2A2 /* Products */;
-					ProjectRef = 5310587E1BB3B30B0004C2A2 /* DTIActivityIndicator.xcodeproj */;
+					ProductGroup = 5330B41D1BB4D9F900404AB3 /* Products */;
+					ProjectRef = 5330B41C1BB4D9F900404AB3 /* DTIActivityIndicator.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -286,18 +284,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		531058841BB3B30B0004C2A2 /* DTIActivityIndicator.framework */ = {
+		5330B4221BB4D9F900404AB3 /* DTIActivityIndicator.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = DTIActivityIndicator.framework;
-			remoteRef = 531058831BB3B30B0004C2A2 /* PBXContainerItemProxy */;
+			remoteRef = 5330B4211BB4D9F900404AB3 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		531058861BB3B30B0004C2A2 /* DTIActivityIndicatorTests.xctest */ = {
+		5330B4241BB4D9F900404AB3 /* DTIActivityIndicatorTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = DTIActivityIndicatorTests.xctest;
-			remoteRef = 531058851BB3B30B0004C2A2 /* PBXContainerItemProxy */;
+			remoteRef = 5330B4231BB4D9F900404AB3 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -410,10 +408,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		531058881BB3B34C0004C2A2 /* PBXTargetDependency */ = {
+		5330B4261BB4DA1A00404AB3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = DTIActivityIndicator;
-			targetProxy = 531058871BB3B34C0004C2A2 /* PBXContainerItemProxy */;
+			targetProxy = 5330B4251BB4DA1A00404AB3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
