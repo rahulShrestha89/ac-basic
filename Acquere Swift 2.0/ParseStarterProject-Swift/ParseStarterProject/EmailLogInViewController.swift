@@ -19,6 +19,8 @@ class EmailLogInViewController: UIViewController {
         super.viewDidLoad()
 
         decorateButton(logInButton, color: UIColor(red: 0.259, green: 0.647, blue: 0.961, alpha: 1))
+        
+        
     }
 
     private func decorateButton(button: UIButton, color: UIColor) {
@@ -38,17 +40,17 @@ class EmailLogInViewController: UIViewController {
         var currentUser = PFUser.currentUser()
         
         if self.emailAddressTextField.text=="" || self.passwordTextField.text==""  {
-            var blankFieldAlert = UIAlertController(title: "Empty Form Field Error", message: "All the Entries are required.", preferredStyle: UIAlertControllerStyle.Alert)
+            let blankFieldAlert = UIAlertController(title: "Empty Form Field Error", message: "All the Entries are required.", preferredStyle: UIAlertControllerStyle.Alert)
             blankFieldAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
             self.presentViewController(blankFieldAlert, animated: true, completion: nil);
         }
         else if !isValidEmail(emailAddressTextField.text!){
-            var emailErrorAlert = UIAlertController(title: "Incorrect Email Format", message: "Please Enter a Valid Email Address.", preferredStyle: UIAlertControllerStyle.Alert)
+            let emailErrorAlert = UIAlertController(title: "Incorrect Email Format", message: "Please Enter a Valid Email Address.", preferredStyle: UIAlertControllerStyle.Alert)
             emailErrorAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
             self.presentViewController(emailErrorAlert, animated: true, completion: nil);
         }
         else if passwordCount < 6 {
-            var passwordLengthErrorAlert = UIAlertController(title: "Short Password", message: "Your Password was more than 5 characters.", preferredStyle: UIAlertControllerStyle.Alert)
+            let passwordLengthErrorAlert = UIAlertController(title: "Short Password", message: "Your Password was more than 5 characters.", preferredStyle: UIAlertControllerStyle.Alert)
             passwordLengthErrorAlert.addAction(UIAlertAction(title: "Gotcha!", style: .Default, handler: nil))
             self.presentViewController(passwordLengthErrorAlert, animated: true, completion: nil);
         }
@@ -57,37 +59,38 @@ class EmailLogInViewController: UIViewController {
                 (user: PFUser?, error: NSError?) -> Void in
                
                 if error != nil{
-                    var combo = UIAlertController(title: "Combo", message: "Email and Pass Combo problem.", preferredStyle: UIAlertControllerStyle.Alert)
+                    let combo = UIAlertController(title: "Combo", message: "Email and Pass Combo problem.", preferredStyle: UIAlertControllerStyle.Alert)
                     combo.addAction(UIAlertAction(title: "Gotcha!", style: .Default, handler: nil))
                     self.presentViewController(combo, animated: true, completion: nil);
                 }
                  else if user!["emailVerified"] as! Bool == false {
-                    var loginFail = UIAlertController(title: "LogIn Fail", message: "Something wrong with email verification.", preferredStyle: UIAlertControllerStyle.Alert)
+                    let loginFail = UIAlertController(title: "LogIn Fail", message: "Something wrong with email verification.", preferredStyle: UIAlertControllerStyle.Alert)
                     loginFail.addAction(UIAlertAction(title: "Gotcha!", style: .Default, handler: nil))
                     self.presentViewController(loginFail, animated: true, completion: nil);
                 }else{
                     
                     let bounds = UIScreen.mainScreen().bounds
-                    let myActivityIndicatorView: DTIActivityIndicatorView = DTIActivityIndicatorView(frame: CGRect(x:bounds.size.width/2-60, y:bounds.size.height/2-80, width:120.0, height:120.0))
+                    let myActivityIndicatorView: DTIActivityIndicatorView = DTIActivityIndicatorView(frame: CGRect(x:bounds.size.width/2-60, y:bounds.size.height/2-128, width:120.0, height:120.0))
                     self.view.addSubview(myActivityIndicatorView)
                     myActivityIndicatorView.indicatorColor = UIColor(red: 0.259, green: 0.647, blue: 0.961, alpha: 1)
                     
                     myActivityIndicatorView.indicatorStyle = DTIIndicatorStyle.convInv(.chasingDots)
                     myActivityIndicatorView.startActivity()
+                    
                     self.view?.backgroundColor = UIColor(white: 1, alpha: 0.8)
                     UIApplication.sharedApplication().beginIgnoringInteractionEvents()
                     
                     
                     let activitySeconds = 5.0
                     let activityDelay = activitySeconds * Double(NSEC_PER_SEC)  // nanoseconds per seconds
-                    var activityDispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(activityDelay))
+                    let activityDispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(activityDelay))
                     // present this after //seconds//
                     dispatch_after(activityDispatchTime, dispatch_get_main_queue(), {
                         myActivityIndicatorView.stopActivity()
                         UIApplication.sharedApplication().endIgnoringInteractionEvents()
                         self.view?.backgroundColor = UIColor(red: 0.082, green: 0.396, blue: 0.753, alpha: 1)
                         
-                        var loginSuccess = UIAlertController(title: "Successful LogIn", message: "All good!!", preferredStyle: UIAlertControllerStyle.Alert)
+                        let loginSuccess = UIAlertController(title: "Successful LogIn", message: "All good!!", preferredStyle: UIAlertControllerStyle.Alert)
                         
                         loginSuccess.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action: UIAlertAction!) -> () in
                             //self.performSegueWithIdentifier("signUpByEmailToLogIn", sender: nil)

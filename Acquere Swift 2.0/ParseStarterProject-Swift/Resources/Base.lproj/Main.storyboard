@@ -141,18 +141,6 @@
                                     <segue destination="xwN-zL-rco" kind="presentation" identifier="logInToLogInByEmail" id="Se5-dy-iYc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r9N-oN-NaU">
-                                <rect key="frame" x="255" y="512" width="90" height="33"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
-                                <inset key="contentEdgeInsets" minX="11" minY="5" maxX="11" maxY="5"/>
-                                <state key="normal" title="Sign Up">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="7Up-9g-KsN" kind="presentation" identifier="signUpThroughLogIn" id="sXO-SK-id2"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RxY-d1-42n">
                                 <rect key="frame" x="16" y="20" width="48" height="30"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
@@ -171,21 +159,33 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Don't have an Account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vl6-mk-7au">
-                                <rect key="frame" x="210" y="488" width="185" height="21"/>
+                                <rect key="frame" x="210" y="463" width="185" height="21"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r9N-oN-NaU">
+                                <rect key="frame" x="255" y="492" width="90" height="33"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
+                                <inset key="contentEdgeInsets" minX="11" minY="5" maxX="11" maxY="5"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="7Up-9g-KsN" kind="presentation" identifier="signUpThroughLogIn" id="sXO-SK-id2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="v7r-vG-YlM" firstAttribute="top" secondItem="N1O-fD-EKN" secondAttribute="bottom" constant="37" id="0eE-hE-54q"/>
+                            <constraint firstItem="r9N-oN-NaU" firstAttribute="centerX" secondItem="Wqa-pc-Uvp" secondAttribute="centerX" id="4NT-PV-3PV"/>
                             <constraint firstAttribute="centerX" secondItem="Px7-89-q8t" secondAttribute="centerX" constant="-3" id="KM6-eA-NBJ"/>
-                            <constraint firstAttribute="centerX" secondItem="Vl6-mk-7au" secondAttribute="centerX" constant="-2.5" id="a49-x1-0C9"/>
                             <constraint firstAttribute="centerX" secondItem="Zcy-Nq-Emz" secondAttribute="centerX" constant="0.5" id="cLL-g3-pGd"/>
+                            <constraint firstItem="Vl6-mk-7au" firstAttribute="centerX" secondItem="Wqa-pc-Uvp" secondAttribute="centerX" id="cNm-MP-d2N"/>
                             <constraint firstItem="DDN-ab-f33" firstAttribute="top" secondItem="v7r-vG-YlM" secondAttribute="bottom" constant="26" id="g21-O0-gdx"/>
                             <constraint firstAttribute="centerX" secondItem="vmQ-dD-gSe" secondAttribute="centerX" id="gHV-eO-iyG"/>
-                            <constraint firstAttribute="centerX" secondItem="r9N-oN-NaU" secondAttribute="centerX" constant="-4.5" id="jEG-Vz-h4A"/>
                             <constraint firstAttribute="centerX" secondItem="DDN-ab-f33" secondAttribute="centerX" id="vMO-Xa-Gyv"/>
                             <constraint firstAttribute="centerX" secondItem="v7r-vG-YlM" secondAttribute="centerX" id="x0l-mI-Bbp"/>
                             <constraint firstItem="vmQ-dD-gSe" firstAttribute="top" secondItem="DDN-ab-f33" secondAttribute="bottom" constant="28" id="zEE-OT-Ypc"/>
@@ -289,7 +289,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="1U9-Yu-B2K" secondAttribute="centerX" constant="0.5" id="4JB-qZ-SYP"/>
+                            <constraint firstAttribute="centerX" secondItem="1U9-Yu-B2K" secondAttribute="centerX" id="4JB-qZ-SYP"/>
                             <constraint firstAttribute="centerX" secondItem="2Zp-Zn-16s" secondAttribute="centerX" constant="0.5" id="74G-KI-wbT"/>
                             <constraint firstAttribute="centerX" secondItem="hEE-9V-DeH" secondAttribute="centerX" constant="1" id="7dW-d9-7DE"/>
                             <constraint firstAttribute="centerX" secondItem="Xln-O2-Rb8" secondAttribute="centerX" constant="0.5" id="JZy-Uh-nvp"/>
@@ -297,7 +297,7 @@
                             <constraint firstAttribute="centerX" secondItem="n8N-dA-EsS" secondAttribute="centerX" id="PgP-CA-hd3"/>
                             <constraint firstItem="2Zp-Zn-16s" firstAttribute="top" secondItem="5qc-lk-ZNz" secondAttribute="bottom" constant="26" id="ZDE-Py-yBK"/>
                             <constraint firstItem="Xln-O2-Rb8" firstAttribute="top" secondItem="2Zp-Zn-16s" secondAttribute="bottom" constant="28" id="lP6-r2-CpD"/>
-                            <constraint firstAttribute="centerX" secondItem="luG-Z2-p01" secondAttribute="centerX" constant="-0.5" id="mFV-Dm-ssB"/>
+                            <constraint firstAttribute="centerX" secondItem="luG-Z2-p01" secondAttribute="centerX" id="mFV-Dm-ssB"/>
                         </constraints>
                     </view>
                     <connections>
@@ -342,12 +342,12 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cq1-NJ-KFd">
-                                <rect key="frame" x="186" y="121" width="229" height="30"/>
+                                <rect key="frame" x="156" y="166" width="290" height="30"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="21"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VZe-6Z-UQ6">
-                                <rect key="frame" x="186" y="178" width="229" height="30"/>
+                                <rect key="frame" x="156" y="209" width="290" height="30"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="21"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
@@ -363,6 +363,12 @@
                                     <action selector="logInButtonTapped:" destination="xwN-zL-rco" eventType="touchUpInside" id="iVj-Mf-C4b"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Welcome To Acquere" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZR-vH-nzf">
+                                <rect key="frame" x="191" y="77" width="221" height="32"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="23"/>
+                                <color key="textColor" red="0.1215686351" green="0.69803923369999998" blue="0.97647064920000004" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKj-my-5Tx">
                                 <rect key="frame" x="237" y="330" width="126" height="30"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
@@ -375,8 +381,9 @@
                         <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="jKj-my-5Tx" secondAttribute="centerX" id="Iuu-9h-OK4"/>
+                            <constraint firstItem="UZR-vH-nzf" firstAttribute="centerX" secondItem="vSJ-zt-Anr" secondAttribute="centerX" id="OBu-R6-vNs"/>
                             <constraint firstAttribute="centerX" secondItem="UUF-X6-rcI" secondAttribute="centerX" id="PoE-yE-zpE"/>
-                            <constraint firstAttribute="centerX" secondItem="Cq1-NJ-KFd" secondAttribute="centerX" constant="-0.5" id="QXT-dR-nA9"/>
+                            <constraint firstAttribute="centerX" secondItem="Cq1-NJ-KFd" secondAttribute="centerX" id="QXT-dR-nA9"/>
                             <constraint firstAttribute="centerX" secondItem="VZe-6Z-UQ6" secondAttribute="centerX" constant="-0.5" id="WQe-gD-bHY"/>
                             <constraint firstAttribute="centerX" secondItem="Qu8-xD-iYo" secondAttribute="centerX" id="eHc-ZU-TUn"/>
                         </constraints>
@@ -608,6 +615,8 @@
                             <constraint firstAttribute="centerX" secondItem="ONq-XB-wns" secondAttribute="centerX" id="Vlq-Af-Nkb"/>
                             <constraint firstAttribute="centerX" secondItem="foK-f0-KPY" secondAttribute="centerX" id="r98-co-p1d"/>
                             <constraint firstAttribute="centerX" secondItem="oSE-Gu-qzE" secondAttribute="centerX" id="sjC-Zb-h2q"/>
+                            <constraint firstAttribute="trailing" secondItem="foK-f0-KPY" secondAttribute="trailing" id="xCM-lm-jEb"/>
+                            <constraint firstItem="foK-f0-KPY" firstAttribute="leading" secondItem="a0O-2T-wAt" secondAttribute="leading" id="z5c-bM-gdd"/>
                         </constraints>
                     </view>
                     <connections>
@@ -658,18 +667,26 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UzH-j7-vrf">
-                                                <rect key="frame" x="152" y="80" width="309" height="116"/>
+                                                <rect key="frame" x="152" y="72" width="309" height="116"/>
                                                 <string key="text">Our Service is provided to you for personal
 non-commercial use. In continuing to use
 our Service you are agreeing to abide by
 certain terms and conditions as follows:
  </string>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R79-fO-gr5">
+                                                <rect key="frame" x="71" y="516" width="470" height="44"/>
+                                                <string key="text">* We may terminate the service for any 
+unauthorized use of it.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5I-Rr-LzN">
-                                                <rect key="frame" x="153" y="182" width="307" height="326"/>
+                                                <rect key="frame" x="154" y="161" width="307" height="326"/>
                                                 <string key="text">* We May Modify the terms of this User 
 agreement FromTime to Time: We reserve
  the right to change the terms of this User 
@@ -686,15 +703,7 @@ otherwise, any new features or
 functionaltiy that augment or enhance 
 our Service shall be subject to
 this User Agreement.</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R79-fO-gr5">
-                                                <rect key="frame" x="71" y="516" width="470" height="44"/>
-                                                <string key="text">* We may terminate the service for any 
-unauthorized use of it.</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -787,7 +796,7 @@ And, when we refer to "personal info"
 the device you are using to connect to the
 internet can be identified. 
 </string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -801,7 +810,7 @@ All the sensitive informations, along with
 type of technologies wont be shared
 until provided with a subpeona or
 relevant jurisdiction.</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -886,7 +895,7 @@ LinkedIn-iOS-SDK- (c) 2014, LinkedIn
 Parse- (c) 2014, Facebook
 Twitter-iOS-SDK, (c) 2015, Twitter
 </string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -934,9 +943,9 @@ Twitter-iOS-SDK, (c) 2015, Twitter
         <image name="TwitterLogo" width="26" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GBT-YX-CxM"/>
-        <segue reference="5hu-QM-ew4"/>
+        <segue reference="4ef-as-ncK"/>
+        <segue reference="sXO-SK-id2"/>
+        <segue reference="Kl4-Zu-cns"/>
         <segue reference="Jer-tI-jT7"/>
-        <segue reference="WWa-jn-ukK"/>
     </inferredMetricsTieBreakers>
 </document>

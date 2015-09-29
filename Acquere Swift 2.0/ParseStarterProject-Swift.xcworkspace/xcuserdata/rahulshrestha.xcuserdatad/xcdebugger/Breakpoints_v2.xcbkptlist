@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ParseStarterProject-Swift/ParseStarterProject/EmailSignUpViewController.swift"
-            timestampString = "464777133.013971"
+            timestampString = "465252276.219475"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "decorateButton(_:color:)"
             landmarkType = "5">
          </BreakpointContent>

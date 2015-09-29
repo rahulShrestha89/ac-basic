@@ -29,6 +29,7 @@ class EmailSignUpViewController: UIViewController{
         decorateButton(signUpButton, color: UIColor(red: 0.114, green: 0.914, blue: 0.714, alpha: 1))
         signUpActivityIndicator.hidden=true
         
+        
     }
     
     private func decorateButton(button: UIButton, color: UIColor) {
@@ -46,28 +47,28 @@ class EmailSignUpViewController: UIViewController{
         let passwordCount = passwordString.characters.count
         
         if firstNameTextField.text=="" || lastNameTextField.text=="" || emailAddressTextField.text=="" || passwordTextField.text=="" || confirmPasswordTextField.text==""{
-            var blankFieldAlert = UIAlertController(title: "Empty Form Field Error", message: "All the Entries are required.", preferredStyle: UIAlertControllerStyle.Alert)
+            let blankFieldAlert = UIAlertController(title: "Empty Form Field Error", message: "All the Entries are required.", preferredStyle: UIAlertControllerStyle.Alert)
             blankFieldAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
             self.presentViewController(blankFieldAlert, animated: true, completion: nil);
         }
         else if !isValidEmail(emailAddressTextField.text!){
-            var emailErrorAlert = UIAlertController(title: "Incorrect Email Format", message: "Please Enter a Valid Email Address.", preferredStyle: UIAlertControllerStyle.Alert)
+            let emailErrorAlert = UIAlertController(title: "Incorrect Email Format", message: "Please Enter a Valid Email Address.", preferredStyle: UIAlertControllerStyle.Alert)
             emailErrorAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
             self.presentViewController(emailErrorAlert, animated: true, completion: nil);
         }
         else if passwordCount < 6 {
-            var passwordLengthErrorAlert = UIAlertController(title: "Weak Password", message: "Password must be greater than 5 characters. Try Again?", preferredStyle: UIAlertControllerStyle.Alert)
+            let passwordLengthErrorAlert = UIAlertController(title: "Weak Password", message: "Password must be greater than 5 characters. Try Again?", preferredStyle: UIAlertControllerStyle.Alert)
             passwordLengthErrorAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
             self.presentViewController(passwordLengthErrorAlert, animated: true, completion: nil);
         }
         else if passwordTextField.text != confirmPasswordTextField.text{
-            var passwordErrorAlert = UIAlertController(title: "Incorrect Password Combination", message: "Passwords do not match. Try Again?", preferredStyle: UIAlertControllerStyle.Alert)
+            let passwordErrorAlert = UIAlertController(title: "Incorrect Password Combination", message: "Passwords do not match. Try Again?", preferredStyle: UIAlertControllerStyle.Alert)
             passwordErrorAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
             self.presentViewController(passwordErrorAlert, animated: true, completion: nil);
         }
         else{
             let bounds = UIScreen.mainScreen().bounds
-            let myActivityIndicatorView: DTIActivityIndicatorView = DTIActivityIndicatorView(frame: CGRect(x:bounds.size.width/2-60, y:bounds.size.height/2+40, width:120.0, height:120.0))
+            let myActivityIndicatorView: DTIActivityIndicatorView = DTIActivityIndicatorView(frame: CGRect(x:bounds.size.width/2-60, y:bounds.size.height/2-10, width:120.0, height:120.0))
             self.view.addSubview(myActivityIndicatorView)
             myActivityIndicatorView.indicatorColor = UIColor(red: 0.114, green: 0.914, blue: 0.714, alpha: 1)
             
@@ -84,7 +85,7 @@ class EmailSignUpViewController: UIViewController{
             user["lastName"] = lastNameTextField.text
             user.signUpInBackgroundWithBlock({ (success: Bool, error: NSError?) -> Void in
                 if error != nil{
-                    var error = UIAlertController(title: "Multiple Account", message: "Account Alreday Registered with this Email.", preferredStyle: UIAlertControllerStyle.Alert)
+                    let error = UIAlertController(title: "Multiple Account", message: "Account Alreday Registered with this Email.", preferredStyle: UIAlertControllerStyle.Alert)
                     error.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action: UIAlertAction!) -> () in
                         self.performSegueWithIdentifier("signUpByEmailToMainSignUp", sender: nil)
                     }))
@@ -96,13 +97,13 @@ class EmailSignUpViewController: UIViewController{
                 else{
                     let activitySeconds = 5.0
                     let activityDelay = activitySeconds * Double(NSEC_PER_SEC)  // nanoseconds per seconds
-                    var activityDispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(activityDelay))
+                    let activityDispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(activityDelay))
                     // present this after //seconds//
                     dispatch_after(activityDispatchTime, dispatch_get_main_queue(), {
                         myActivityIndicatorView.stopActivity()
                         UIApplication.sharedApplication().endIgnoringInteractionEvents()
                         self.view?.backgroundColor = UIColor(red: 0.302, green: 0.714, blue: 0.675, alpha: 1)
-                        var success = UIAlertController(title: "Congratulations!", message: "Please Check your email for account verification.", preferredStyle: UIAlertControllerStyle.Alert)
+                        let success = UIAlertController(title: "Congratulations!", message: "Please Check your email for account verification.", preferredStyle: UIAlertControllerStyle.Alert)
                         success.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action: UIAlertAction!) -> () in
                             self.performSegueWithIdentifier("signUpByEmailToLogIn", sender: nil)
                             PFUser.logOut()
