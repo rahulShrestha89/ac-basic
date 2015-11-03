@@ -65,7 +65,7 @@ class SignUpViewController: UIViewController {
                     self.presentViewController(userExists, animated: true, completion: nil);
                 }
             } else {
-                let logInCancel = UIAlertController(title: "Failed", message: "Uh oh. The user cancelled the Facebook login!", preferredStyle: UIAlertControllerStyle.Alert)
+                let logInCancel = UIAlertController(title: "Failed", message: "Uh oh. The user cancelled the Facebook Sign Up!", preferredStyle: UIAlertControllerStyle.Alert)
                 logInCancel.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
                 self.presentViewController(logInCancel, animated: true, completion: nil);
             }

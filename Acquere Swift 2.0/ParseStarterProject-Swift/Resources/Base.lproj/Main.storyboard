@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -96,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1559" y="458"/>
+            <point key="canvasLocation" x="1495" y="350"/>
         </scene>
         <!--Log In-->
         <scene sceneID="HlV-3J-EC8">
@@ -118,6 +118,9 @@
                                 <state key="normal" title="  Log In with Facebook" image="FacebookLogo">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="facebookLogInTapped:" destination="10H-WK-vzb" eventType="touchUpInside" id="OXn-dd-7gT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDN-ab-f33">
                                 <rect key="frame" x="177" y="177" width="245" height="44"/>
@@ -215,7 +218,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RcZ-ca-hxL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1924" y="1187"/>
+            <point key="canvasLocation" x="1600" y="1211"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="G1F-cI-ItA">
@@ -336,7 +339,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wqI-vp-6ps" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2763" y="482"/>
+            <point key="canvasLocation" x="3089" y="390"/>
         </scene>
         <!--Email Log In View Controller-->
         <scene sceneID="DfQ-9k-WWp">
@@ -426,11 +429,12 @@
                         <outlet property="emailAddressTextField" destination="Cq1-NJ-KFd" id="6Tn-L7-fBG"/>
                         <outlet property="logInButton" destination="UUF-X6-rcI" id="9vw-oN-FQy"/>
                         <outlet property="passwordTextField" destination="VZe-6Z-UQ6" id="WG5-ol-zig"/>
+                        <segue destination="L5N-zG-I8l" kind="presentation" identifier="firstLoginToSignUp" id="L0M-87-4Ql"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u0J-dg-cTo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2598" y="1187"/>
+            <point key="canvasLocation" x="2652" y="1187"/>
         </scene>
         <!--Sign Up By Email-->
         <scene sceneID="AOf-dT-YAB">
@@ -683,7 +687,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7wd-eJ-pBK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3332" y="-212"/>
+            <point key="canvasLocation" x="3692" y="-138"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="gEj-J5-RH6">
@@ -815,7 +819,104 @@ this User Agreement.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pi7-nW-onN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3718" y="656.5"/>
+            <point key="canvasLocation" x="4110" y="1194"/>
+        </scene>
+        <!--Post Sign Up View Controller-->
+        <scene sceneID="eq8-X0-I3O">
+            <objects>
+                <viewController id="L5N-zG-I8l" customClass="PostSignUpViewController" customModule="ParseStarterProject_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CeR-yM-Ia0"/>
+                        <viewControllerLayoutGuide type="bottom" id="8bL-Xh-SgX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bk8-o4-gGi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xyj-2W-AqK">
+                                <rect key="frame" x="276" y="119" width="51" height="31"/>
+                                <animations/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Show me in Discovery" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x48-c0-6ED">
+                                <rect key="frame" x="207" y="85" width="187" height="26"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Followers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uzl-aB-Alx">
+                                <rect key="frame" x="260" y="185" width="81" height="26"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AEc-tq-wkl">
+                                <rect key="frame" x="276" y="219" width="51" height="31"/>
+                                <animations/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="New To Programming?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dj4-5B-yd1">
+                                <rect key="frame" x="203" y="282" width="194" height="26"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BeF-GM-8ze">
+                                <rect key="frame" x="276" y="316" width="51" height="31"/>
+                                <animations/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="scc-IP-rTJ">
+                                <rect key="frame" x="283" y="522" width="35" height="34"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                <state key="normal" title="Next"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Project Experience" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nxa-Zf-Ssb">
+                                <rect key="frame" x="213" y="373" width="159" height="26"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zfE-kG-ni3">
+                                <rect key="frame" x="276" y="407" width="51" height="31"/>
+                                <animations/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="User Privacy Options" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7AY-k8-oS5">
+                                <rect key="frame" x="202" y="41" width="195" height="29"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="21"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Uzl-aB-Alx" firstAttribute="centerX" secondItem="bk8-o4-gGi" secondAttribute="centerX" id="41m-HS-K1j"/>
+                            <constraint firstItem="AEc-tq-wkl" firstAttribute="centerX" secondItem="bk8-o4-gGi" secondAttribute="centerX" id="Bch-zT-9gh"/>
+                            <constraint firstItem="zfE-kG-ni3" firstAttribute="centerX" secondItem="bk8-o4-gGi" secondAttribute="centerX" id="Lol-6G-gl0"/>
+                            <constraint firstItem="scc-IP-rTJ" firstAttribute="centerX" secondItem="bk8-o4-gGi" secondAttribute="centerX" id="N5F-hy-DQw"/>
+                            <constraint firstItem="BeF-GM-8ze" firstAttribute="centerX" secondItem="bk8-o4-gGi" secondAttribute="centerX" id="V5u-Gb-aYL"/>
+                            <constraint firstItem="nxa-Zf-Ssb" firstAttribute="centerX" secondItem="bk8-o4-gGi" secondAttribute="centerX" id="fY7-Pg-Ca9"/>
+                            <constraint firstItem="x48-c0-6ED" firstAttribute="centerX" secondItem="bk8-o4-gGi" secondAttribute="centerX" id="lBA-C9-Qef"/>
+                            <constraint firstItem="7AY-k8-oS5" firstAttribute="centerX" secondItem="bk8-o4-gGi" secondAttribute="centerX" id="n5p-n6-X2g"/>
+                            <constraint firstItem="Xyj-2W-AqK" firstAttribute="centerX" secondItem="bk8-o4-gGi" secondAttribute="centerX" id="si3-1z-wF9"/>
+                            <constraint firstItem="Dj4-5B-yd1" firstAttribute="centerX" secondItem="bk8-o4-gGi" secondAttribute="centerX" id="z86-4O-j6w"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="discoverySwitch" destination="Xyj-2W-AqK" id="AdJ-D5-g3p"/>
+                        <outlet property="followersSwitch" destination="AEc-tq-wkl" id="5fO-Fd-z7v"/>
+                        <outlet property="goToNextViewController" destination="scc-IP-rTJ" id="LR2-bs-lGc"/>
+                        <outlet property="projectExperienceSwitch" destination="zfE-kG-ni3" id="kz1-yz-UM9"/>
+                        <outlet property="rookieSwitch" destination="BeF-GM-8ze" id="FHr-co-1Ol"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OSZ-ZB-CPu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3396" y="1187"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="3Zf-Fs-BsV">
@@ -829,14 +930,14 @@ this User Agreement.</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s1L-lL-VHJ">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s1L-lL-VHJ">
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="487"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tiN-vB-g6O" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="568" height="600"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Privacy Policy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGM-v7-i2Q">
-                                                <rect key="frame" x="243" y="0.0" width="114" height="26"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Privacy Policy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGM-v7-i2Q">
+                                                <rect key="frame" x="227" y="0.0" width="114" height="26"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1020,9 +1121,9 @@ Twitter-iOS-SDK, (c) 2015, Twitter
         <image name="TwitterLogo" width="26" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="sX1-wL-EIb"/>
+        <segue reference="Jer-tI-jT7"/>
+        <segue reference="Kl4-Zu-cns"/>
         <segue reference="sXO-SK-id2"/>
         <segue reference="4ef-as-ncK"/>
-        <segue reference="3Dg-35-9GQ"/>
     </inferredMetricsTieBreakers>
 </document>

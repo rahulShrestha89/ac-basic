@@ -36,8 +36,7 @@ class EmailLogInViewController: UIViewController {
         
         let passwordString:String = passwordTextField.text!
         let passwordCount = passwordString.characters.count
-        
-        var currentUser = PFUser.currentUser()
+   
         
         if self.emailAddressTextField.text=="" || self.passwordTextField.text==""  {
             let blankFieldAlert = UIAlertController(title: "Empty Form Field Error", message: "All the Entries are required.", preferredStyle: UIAlertControllerStyle.Alert)
@@ -88,18 +87,32 @@ class EmailLogInViewController: UIViewController {
                     dispatch_after(activityDispatchTime, dispatch_get_main_queue(), {
                         myActivityIndicatorView.stopActivity()
                         UIApplication.sharedApplication().endIgnoringInteractionEvents()
-                        self.view?.backgroundColor = UIColor(red: 0.082, green: 0.396, blue: 0.753, alpha: 1)
+                        self.view?.backgroundColor = UIColor(red: 0, green: 0.749, blue: 0.647, alpha: 1)
                         
-                        let loginSuccess = UIAlertController(title: "Successful LogIn", message: "All good!!", preferredStyle: UIAlertControllerStyle.Alert)
-                        
-                        loginSuccess.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action: UIAlertAction!) -> () in
-                            //self.performSegueWithIdentifier("signUpByEmailToLogIn", sender: nil)
-                            
-                        }))
-                        
-                        self.presentViewController(loginSuccess, animated: true, completion: nil);
+                        var currentUser = PFUser.currentUser()
+                        if currentUser != nil {
+                            // if the user is login for the first time
+                            if currentUser?["firstTimeLoggingIn"] as! Bool == true{
+                                currentUser?["firstTimeLoggingIn"]=false
+                                currentUser?.saveInBackground()
+                                // go to post sign up for the first login
+                                self.performSegueWithIdentifier("firstLoginToSignUp", sender: nil)
+                            // if previosuly logged in
+                            } else{
+                                
+                                let loginSuccess = UIAlertController(title: "Successful LogIn", message: "All good!!", preferredStyle: UIAlertControllerStyle.Alert)
+                                
+                                loginSuccess.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action: UIAlertAction!) -> () in
+                                                        }))
+                                
+                                self.presentViewController(loginSuccess, animated: true, completion: nil);
+                            }
+                        } else {
+                            // Show the signup or login screen
+                        }
                         
                     })
+                    
                 }
             }
         }
