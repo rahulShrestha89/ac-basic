@@ -90,16 +90,19 @@ class EmailLogInViewController: UIViewController {
                         self.view?.backgroundColor = UIColor(red: 0, green: 0.749, blue: 0.647, alpha: 1)
                         
                         var currentUser = PFUser.currentUser()
-                        if currentUser != nil {
+                        
+                        if currentUser != nil { 
                             // if the user is login for the first time
                             if currentUser?["firstTimeLoggingIn"] as! Bool == true{
+                                // go to post sign up for the first login
                                 currentUser?["firstTimeLoggingIn"]=false
                                 currentUser?.saveInBackground()
-                                // go to post sign up for the first login
                                 self.performSegueWithIdentifier("firstLoginToSignUp", sender: nil)
                             // if previosuly logged in
                             } else{
+                                // go to the main tabbed pages.
                                 
+                                // TEMPORARY: Show alert view controller
                                 let loginSuccess = UIAlertController(title: "Successful LogIn", message: "All good!!", preferredStyle: UIAlertControllerStyle.Alert)
                                 
                                 loginSuccess.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action: UIAlertAction!) -> () in
@@ -108,7 +111,7 @@ class EmailLogInViewController: UIViewController {
                                 self.presentViewController(loginSuccess, animated: true, completion: nil);
                             }
                         } else {
-                            // Show the signup or login screen
+                            print("No user found")
                         }
                         
                     })
