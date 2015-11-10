@@ -1023,7 +1023,7 @@ this User Agreement.</string>
         <!--More-->
         <scene sceneID="fM7-DF-XZW">
             <objects>
-                <viewController id="KLt-zQ-bYh" sceneMemberID="viewController">
+                <viewController id="KLt-zQ-bYh" customClass="MoreViewController" customModule="ParseStarterProject_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8YC-3X-yP0"/>
                         <viewControllerLayoutGuide type="bottom" id="y3i-7M-Xtd"/>
@@ -1031,10 +1031,26 @@ this User Agreement.</string>
                     <view key="view" contentMode="scaleToFill" id="mYG-xU-JqD">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kKQ-lb-SaU">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kKQ-lb-SaU" firstAttribute="top" secondItem="mYG-xU-JqD" secondAttribute="top" id="6e6-8d-2Zl"/>
+                            <constraint firstItem="kKQ-lb-SaU" firstAttribute="leading" secondItem="mYG-xU-JqD" secondAttribute="leading" id="ElZ-Cz-uZG"/>
+                            <constraint firstItem="y3i-7M-Xtd" firstAttribute="top" secondItem="kKQ-lb-SaU" secondAttribute="bottom" id="j7q-7E-WgR"/>
+                            <constraint firstAttribute="trailing" secondItem="kKQ-lb-SaU" secondAttribute="trailing" id="yyA-fl-ukn"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="More" image="More" id="OB0-hl-6kW"/>
+                    <connections>
+                        <outlet property="tableView" destination="kKQ-lb-SaU" id="acK-f6-chV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UJd-vB-qvx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
