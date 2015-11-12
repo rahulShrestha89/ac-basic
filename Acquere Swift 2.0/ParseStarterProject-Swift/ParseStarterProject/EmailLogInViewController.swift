@@ -100,15 +100,16 @@ class EmailLogInViewController: UIViewController {
                                 self.performSegueWithIdentifier("firstLoginToSignUp", sender: nil)
                             // if previosuly logged in
                             } else{
-                                // go to the main tabbed pages.
                                 
-                                // TEMPORARY: Show alert view controller
-                                let loginSuccess = UIAlertController(title: "Successful LogIn", message: "All good!!", preferredStyle: UIAlertControllerStyle.Alert)
+                                self.performSegueWithIdentifier("afterVerified", sender: nil)
                                 
-                                loginSuccess.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action: UIAlertAction!) -> () in
-                                                        }))
-                                
-                                self.presentViewController(loginSuccess, animated: true, completion: nil);
+//                                // TEMPORARY: Show alert view controller
+//                                let loginSuccess = UIAlertController(title: "Successful LogIn", message: "All good!!", preferredStyle: UIAlertControllerStyle.Alert)
+//                                
+//                                loginSuccess.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action: UIAlertAction!) -> () in
+//                                                        }))
+//                                
+//                                self.presentViewController(loginSuccess, animated: true, completion: nil);
                             }
                         } else {
                             print("No user found")

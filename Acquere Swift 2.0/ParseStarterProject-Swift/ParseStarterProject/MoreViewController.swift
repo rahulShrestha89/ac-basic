@@ -7,14 +7,17 @@
 //
 
 import UIKit
+import Parse
 
 class MoreViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
 
+    var currentUser = PFUser.currentUser()
+    
     // provides the number of section header titles
-    let headerTitlesForSection = ["User", "Settings"]
-    let rowData = [["User Name"], ["Privacy Settings", "Info Settings", "Notification Settings"]]
+    let headerTitlesForSection = ["User", " "," "," "]
+    let rowData = [[" "], ["Projects","Expertise"],["Privacy Settings", "Info Settings", "Notification Settings"] , ["Log Out"]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +30,8 @@ class MoreViewController: UIViewController,UITableViewDataSource,UITableViewDele
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
     
     // provide the number of section to the table
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -53,7 +58,14 @@ class MoreViewController: UIViewController,UITableViewDataSource,UITableViewDele
         
         var cell = UITableViewCell()
         
-        cell.textLabel?.text = rowData[indexPath.section][indexPath.row]
+        if(indexPath.section==0 && indexPath.row==0){
+            cell.textLabel?.text = (currentUser!["firstName"] as? String)! + " " +
+                (currentUser!["lastName"] as? String)!
+        } else {
+            cell.textLabel?.text = rowData[indexPath.section][indexPath.row]
+        }
+        
+        cell.textLabel?.font = UIFont (name: "Avenir Book", size: 18)
         
         return cell
     }
