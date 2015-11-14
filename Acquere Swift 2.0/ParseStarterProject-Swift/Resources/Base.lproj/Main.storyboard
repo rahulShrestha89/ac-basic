@@ -872,6 +872,10 @@ this User Agreement.</string>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                 <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="doNext:" destination="L5N-zG-I8l" eventType="touchUpInside" id="UtJ-w0-qKb"/>
+                                    <segue destination="V3a-tF-w3C" kind="presentation" identifier="toTabbedPage" id="5iE-AO-5cV"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Project Experience" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nxa-Zf-Ssb">
                                 <rect key="frame" x="213" y="373" width="159" height="26"/>
@@ -917,7 +921,7 @@ this User Agreement.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OSZ-ZB-CPu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3396" y="1187"/>
+            <point key="canvasLocation" x="3341" y="1187"/>
         </scene>
         <!--Search-->
         <scene sceneID="xrU-bO-DUi">
@@ -1021,6 +1025,159 @@ this User Agreement.</string>
             </objects>
             <point key="canvasLocation" x="2838" y="3127"/>
         </scene>
+        <!--User Info View Controller-->
+        <scene sceneID="QK6-OE-lJz">
+            <objects>
+                <viewController id="l8N-q3-GbK" customClass="UserInfoViewController" customModule="ParseStarterProject_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="czC-nH-uKl"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Zm-aK-LMp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4kE-yb-mId">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name and Last Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dh0-SR-acc">
+                                <rect key="frame" x="187" y="50" width="226" height="26"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="FjS-De-b4X">
+                                <rect key="frame" x="169" y="84" width="263" height="311"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="311" id="602-Uk-MtB"/>
+                                    <constraint firstAttribute="width" constant="263" id="XLM-jO-YEo"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQo-41-Ps2">
+                                <rect key="frame" x="24" y="18" width="40" height="34"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBack:" destination="l8N-q3-GbK" eventType="touchUpInside" id="FRU-4T-0YL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0Q-vb-L60">
+                                <rect key="frame" x="231" y="477" width="139" height="37"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                <state key="normal" title="Add @UserName">
+                                    <color key="titleColor" red="0.01026417567" green="0.03144885477" blue="0.044625946969999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="User Email Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLV-mJ-9Yb">
+                                <rect key="frame" x="222" y="522" width="156" height="25"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Followers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Lz-ea-RPs">
+                                <rect key="frame" x="169" y="413" width="77" height="25"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="hjf-6h-wd4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Following" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvm-30-Qb3">
+                                <rect key="frame" x="353" y="413" width="79" height="25"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="qw4-hJ-geG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUd-Ut-QwL">
+                                <rect key="frame" x="202" y="446" width="11" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="11" id="zHp-kU-io1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRB-XZ-os4">
+                                <rect key="frame" x="387" y="446" width="11" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="11" id="lz8-qq-WXa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pnf-Dp-1lX">
+                                <rect key="frame" x="169" y="367" width="40" height="28"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="5S6-4r-jDa"/>
+                                    <constraint firstAttribute="height" constant="28" id="LfL-PJ-xYg"/>
+                                </constraints>
+                                <state key="normal" image="Camera"/>
+                                <connections>
+                                    <action selector="changeImage:" destination="l8N-q3-GbK" eventType="touchUpInside" id="2vM-Lk-d1L"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="1" green="0.90980392160000001" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="FjS-De-b4X" firstAttribute="centerX" secondItem="4kE-yb-mId" secondAttribute="centerX" id="17m-Fi-Yra"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yvm-30-Qb3" secondAttribute="trailing" constant="10" id="2ZD-hB-08k"/>
+                            <constraint firstItem="dh0-SR-acc" firstAttribute="centerX" secondItem="4kE-yb-mId" secondAttribute="centerX" id="57w-Hv-VZ6"/>
+                            <constraint firstItem="Pnf-Dp-1lX" firstAttribute="leading" secondItem="4kE-yb-mId" secondAttribute="leadingMargin" constant="40" id="8r8-DO-i0x"/>
+                            <constraint firstItem="vLV-mJ-9Yb" firstAttribute="centerX" secondItem="4kE-yb-mId" secondAttribute="centerX" id="JDs-Ns-lm4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xRB-XZ-os4" secondAttribute="trailing" constant="40" id="LS1-gm-UWh"/>
+                            <constraint firstItem="O0Q-vb-L60" firstAttribute="centerX" secondItem="4kE-yb-mId" secondAttribute="centerX" id="eDc-du-ubC"/>
+                            <constraint firstItem="dh0-SR-acc" firstAttribute="top" secondItem="czC-nH-uKl" secondAttribute="bottom" constant="30" id="l2P-sW-vtS"/>
+                            <constraint firstItem="qUd-Ut-QwL" firstAttribute="leading" secondItem="4kE-yb-mId" secondAttribute="leadingMargin" constant="40" id="l2w-Tn-7Wi"/>
+                            <constraint firstItem="2Lz-ea-RPs" firstAttribute="leading" secondItem="4kE-yb-mId" secondAttribute="leadingMargin" constant="10" id="lvh-wL-hZy"/>
+                            <constraint firstItem="FjS-De-b4X" firstAttribute="top" secondItem="dh0-SR-acc" secondAttribute="bottom" constant="8" id="psm-9h-fZE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="followingNumber" destination="xRB-XZ-os4" id="V4I-db-nsy"/>
+                        <outlet property="numberOfFollowers" destination="qUd-Ut-QwL" id="Thn-wC-hYB"/>
+                        <outlet property="showRealName" destination="dh0-SR-acc" id="z8v-VL-ZkD"/>
+                        <outlet property="showUsername" destination="O0Q-vb-L60" id="UYW-lG-Nce"/>
+                        <outlet property="userProfileImage" destination="FjS-De-b4X" id="dbK-oq-xOM"/>
+                        <segue destination="V3a-tF-w3C" kind="presentation" id="5aY-Fx-ojB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="16S-DG-qJZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1651" y="3493"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="xvI-Fw-sQd">
+            <objects>
+                <viewController id="jxU-uS-Z5q" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GbK-Lb-xhl"/>
+                        <viewControllerLayoutGuide type="bottom" id="gWS-VF-VZ2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TWL-O2-WeL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jDL-xU-4yj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2285" y="3463"/>
+        </scene>
         <!--More-->
         <scene sceneID="fM7-DF-XZW">
             <objects>
@@ -1051,11 +1208,13 @@ this User Agreement.</string>
                     <tabBarItem key="tabBarItem" title="More" image="More" id="OB0-hl-6kW"/>
                     <connections>
                         <outlet property="tableView" destination="kKQ-lb-SaU" id="acK-f6-chV"/>
+                        <segue destination="l8N-q3-GbK" kind="presentation" identifier="showUserDetails" id="lOu-lB-wXD"/>
+                        <segue destination="jxU-uS-Z5q" kind="presentation" identifier="showProjects" id="Ty9-Fo-epY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UJd-vB-qvx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2178" y="3127"/>
+            <point key="canvasLocation" x="1946" y="2673"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="3Zf-Fs-BsV">
@@ -1256,6 +1415,8 @@ Twitter-iOS-SDK, (c) 2015, Twitter
     <resources>
         <image name="Activity" width="50" height="50"/>
         <image name="Add Up" width="50" height="50"/>
+        <image name="Camera" width="50" height="50"/>
+        <image name="DefaultProfileImage" width="196" height="236"/>
         <image name="Discover" width="50" height="50"/>
         <image name="EmailLogo" width="25" height="25"/>
         <image name="FacebookLogo" width="29" height="29"/>
@@ -1265,8 +1426,9 @@ Twitter-iOS-SDK, (c) 2015, Twitter
         <image name="TwitterLogo" width="26" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="5aY-Fx-ojB"/>
+        <segue reference="Glw-3d-wRa"/>
         <segue reference="4ef-as-ncK"/>
-        <segue reference="WWa-jn-ukK"/>
         <segue reference="Jer-tI-jT7"/>
         <segue reference="Kl4-Zu-cns"/>
     </inferredMetricsTieBreakers>

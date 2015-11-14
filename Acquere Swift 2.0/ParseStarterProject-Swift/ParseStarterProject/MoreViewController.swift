@@ -69,5 +69,15 @@ class MoreViewController: UIViewController,UITableViewDataSource,UITableViewDele
         
         return cell
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if(indexPath.section==0 && indexPath.row==0){
+           self.performSegueWithIdentifier("showUserDetails", sender: self)
+        } else{
+            self.performSegueWithIdentifier("showProjects", sender: self)
+        }
+        
+    }
 
 }

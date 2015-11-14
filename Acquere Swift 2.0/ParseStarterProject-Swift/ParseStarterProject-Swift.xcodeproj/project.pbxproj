@@ -24,6 +24,7 @@
 		5381DC4A1BC796AB0011C017 /* PostSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5381DC491BC796AB0011C017 /* PostSignUpViewController.swift */; };
 		5389CFD01BADC18700768D6E /* LegalPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5389CFCF1BADC18700768D6E /* LegalPageViewController.swift */; };
 		53A733D21BABF11200A0232D /* EmailSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A733D11BABF11200A0232D /* EmailSignUpViewController.swift */; };
+		53BA05A21BF7109D000BF774 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BA05A11BF7109D000BF774 /* UserInfoViewController.swift */; };
 		53DACA1B1BA692ED0012D4A1 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DACA171BA692ED0012D4A1 /* Fabric.framework */; };
 		53DACA1C1BA692ED0012D4A1 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DACA181BA692ED0012D4A1 /* TwitterKit.framework */; };
 		53DACA1D1BA692ED0012D4A1 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 53DACA191BA692ED0012D4A1 /* TwitterKitResources.bundle */; };
@@ -92,6 +93,7 @@
 		5381DC491BC796AB0011C017 /* PostSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostSignUpViewController.swift; sourceTree = "<group>"; };
 		5389CFCF1BADC18700768D6E /* LegalPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegalPageViewController.swift; sourceTree = "<group>"; };
 		53A733D11BABF11200A0232D /* EmailSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailSignUpViewController.swift; sourceTree = "<group>"; };
+		53BA05A11BF7109D000BF774 /* UserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		53DACA171BA692ED0012D4A1 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		53DACA181BA692ED0012D4A1 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
 		53DACA191BA692ED0012D4A1 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				53739FEC1BEBF2E8007FD9E9 /* MoreViewController.swift */,
+				53BA05A11BF7109D000BF774 /* UserInfoViewController.swift */,
 			);
 			name = TabbedView;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				81BA814D1A49DA1800E65899 /* HomeViewController.swift in Sources */,
 				5381DC4A1BC796AB0011C017 /* PostSignUpViewController.swift in Sources */,
 				5389CFD01BADC18700768D6E /* LegalPageViewController.swift in Sources */,
+				53BA05A21BF7109D000BF774 /* UserInfoViewController.swift in Sources */,
 				81BA814B1A49DA1800E65899 /* AppDelegate.swift in Sources */,
 				53A733D21BABF11200A0232D /* EmailSignUpViewController.swift in Sources */,
 			);

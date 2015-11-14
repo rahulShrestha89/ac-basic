@@ -21,6 +21,10 @@ class PostSignUpViewController: UIViewController {
 
     }
 
+    @IBAction func doNext(sender: AnyObject) {
+        
+        self.performSegueWithIdentifier("toTabbedPage", sender: nil)
+    }
     
 
 
