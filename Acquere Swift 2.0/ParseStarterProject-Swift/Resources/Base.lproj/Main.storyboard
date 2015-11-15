@@ -1070,6 +1070,9 @@ this User Agreement.</string>
                                 <state key="normal" title="Add @UserName">
                                     <color key="titleColor" red="0.01026417567" green="0.03144885477" blue="0.044625946969999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="addUsername:" destination="l8N-q3-GbK" eventType="touchUpInside" id="ma4-Wq-JX5"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="User Email Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLV-mJ-9Yb">
                                 <rect key="frame" x="222" y="522" width="156" height="25"/>
@@ -1151,8 +1154,9 @@ this User Agreement.</string>
                         <outlet property="numberOfFollowers" destination="qUd-Ut-QwL" id="Thn-wC-hYB"/>
                         <outlet property="showRealName" destination="dh0-SR-acc" id="z8v-VL-ZkD"/>
                         <outlet property="showUsername" destination="O0Q-vb-L60" id="UYW-lG-Nce"/>
+                        <outlet property="userEmailAddress" destination="vLV-mJ-9Yb" id="lGN-Kj-7Po"/>
                         <outlet property="userProfileImage" destination="FjS-De-b4X" id="dbK-oq-xOM"/>
-                        <segue destination="V3a-tF-w3C" kind="presentation" id="5aY-Fx-ojB"/>
+                        <segue destination="V3a-tF-w3C" kind="presentation" identifier="backToTabbedViewFromUserInfo" id="5aY-Fx-ojB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="16S-DG-qJZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1176,7 +1180,7 @@ this User Agreement.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jDL-xU-4yj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2285" y="3463"/>
+            <point key="canvasLocation" x="2363" y="3541"/>
         </scene>
         <!--More-->
         <scene sceneID="fM7-DF-XZW">
