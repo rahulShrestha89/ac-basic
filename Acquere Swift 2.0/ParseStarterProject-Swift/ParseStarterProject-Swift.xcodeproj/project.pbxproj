@@ -26,6 +26,7 @@
 		5390C95D1BF8C70A006A6CFB /* AddUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5390C95C1BF8C70A006A6CFB /* AddUpViewController.swift */; };
 		53A733D21BABF11200A0232D /* EmailSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A733D11BABF11200A0232D /* EmailSignUpViewController.swift */; };
 		53BA05A21BF7109D000BF774 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BA05A11BF7109D000BF774 /* UserInfoViewController.swift */; };
+		53C905D91BFB24F400C8BFD2 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C905D81BFB24F400C8BFD2 /* ProjectsViewController.swift */; };
 		53DACA1B1BA692ED0012D4A1 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DACA171BA692ED0012D4A1 /* Fabric.framework */; };
 		53DACA1C1BA692ED0012D4A1 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DACA181BA692ED0012D4A1 /* TwitterKit.framework */; };
 		53DACA1D1BA692ED0012D4A1 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 53DACA191BA692ED0012D4A1 /* TwitterKitResources.bundle */; };
@@ -96,6 +97,7 @@
 		5390C95C1BF8C70A006A6CFB /* AddUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddUpViewController.swift; sourceTree = "<group>"; };
 		53A733D11BABF11200A0232D /* EmailSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailSignUpViewController.swift; sourceTree = "<group>"; };
 		53BA05A11BF7109D000BF774 /* UserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		53C905D81BFB24F400C8BFD2 /* ProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
 		53DACA171BA692ED0012D4A1 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		53DACA181BA692ED0012D4A1 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
 		53DACA191BA692ED0012D4A1 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				53739FEC1BEBF2E8007FD9E9 /* MoreViewController.swift */,
 				53BA05A11BF7109D000BF774 /* UserInfoViewController.swift */,
 				5390C95C1BF8C70A006A6CFB /* AddUpViewController.swift */,
+				53C905D81BFB24F400C8BFD2 /* ProjectsViewController.swift */,
 			);
 			name = TabbedView;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53C905D91BFB24F400C8BFD2 /* ProjectsViewController.swift in Sources */,
 				53739FED1BEBF2E8007FD9E9 /* MoreViewController.swift in Sources */,
 				534946271BA528B400D64F29 /* LogInViewController.swift in Sources */,
 				537755721BB3F2680084C87F /* EmailLogInViewController.swift in Sources */,

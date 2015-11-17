@@ -73,14 +73,21 @@ class MoreViewController: UIViewController,UITableViewDataSource,UITableViewDele
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         if(indexPath.section==0 && indexPath.row==0){
+            
            self.performSegueWithIdentifier("showUserDetails", sender: self)
+            
         } else if(indexPath.section==3 && indexPath.row==0){
             
             PFUser.logOut()
             print(PFUser.currentUser())
             self.performSegueWithIdentifier("afterLogout", sender:nil )
-        } else{
+            
+        } else if (indexPath.section==1 && indexPath.row==0){
+            
             self.performSegueWithIdentifier("showProjects", sender: self)
+            
+        } else {
+        
         }
         
     }

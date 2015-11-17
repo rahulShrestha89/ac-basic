@@ -84,7 +84,7 @@ class AddUpViewController: UIViewController,UITextViewDelegate,UIPickerViewDataS
                 newProject.saveInBackgroundWithBlock {
                     (success: Bool, error: NSError?) -> Void in
                     if (success) {
-                        
+                        self.performSegueWithIdentifier("showProjectsTableOnSuccess", sender: nil)
                         print("done saving the project on parse...")
                     } else {
                         print("error saving the project on parse...")
