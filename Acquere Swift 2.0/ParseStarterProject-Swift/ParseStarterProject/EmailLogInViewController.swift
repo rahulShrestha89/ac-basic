@@ -15,6 +15,7 @@ class EmailLogInViewController: UIViewController {
     @IBOutlet weak var emailAddressTextField: UITextField!
     @IBOutlet weak var logInButton: UIButton!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var forgotPassword: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,6 +33,18 @@ class EmailLogInViewController: UIViewController {
         button.layer.cornerRadius = 7
     }
 
+    @IBAction func forgotPasswordButtonTapped(sender: AnyObject) {
+        if self.emailAddressTextField.text=="" {
+            let blankFieldAlert = UIAlertController(title: "Empty Form Field Error", message: "Enter an email address to reset Password.", preferredStyle: UIAlertControllerStyle.Alert)
+            blankFieldAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            self.presentViewController(blankFieldAlert, animated: true, completion: nil);
+        }else {
+            PFUser.requestPasswordResetForEmailInBackground(self.emailAddressTextField.text!)
+            let passwordChangeAlert = UIAlertController(title: "Email Sent", message: "Check your email for further instruction.", preferredStyle: UIAlertControllerStyle.Alert)
+            passwordChangeAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            self.presentViewController(passwordChangeAlert, animated: true, completion: nil);
+        }
+    }
     @IBAction func logInButtonTapped(sender: AnyObject) {
         
         let passwordString:String = passwordTextField.text!

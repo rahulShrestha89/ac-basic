@@ -23,6 +23,7 @@
 		537861131BA4D8BF00D2A535 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537861121BA4D8BF00D2A535 /* SignUpViewController.swift */; };
 		5381DC4A1BC796AB0011C017 /* PostSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5381DC491BC796AB0011C017 /* PostSignUpViewController.swift */; };
 		5389CFD01BADC18700768D6E /* LegalPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5389CFCF1BADC18700768D6E /* LegalPageViewController.swift */; };
+		5390C95D1BF8C70A006A6CFB /* AddUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5390C95C1BF8C70A006A6CFB /* AddUpViewController.swift */; };
 		53A733D21BABF11200A0232D /* EmailSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A733D11BABF11200A0232D /* EmailSignUpViewController.swift */; };
 		53BA05A21BF7109D000BF774 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BA05A11BF7109D000BF774 /* UserInfoViewController.swift */; };
 		53DACA1B1BA692ED0012D4A1 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53DACA171BA692ED0012D4A1 /* Fabric.framework */; };
@@ -92,6 +93,7 @@
 		537861121BA4D8BF00D2A535 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5381DC491BC796AB0011C017 /* PostSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostSignUpViewController.swift; sourceTree = "<group>"; };
 		5389CFCF1BADC18700768D6E /* LegalPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegalPageViewController.swift; sourceTree = "<group>"; };
+		5390C95C1BF8C70A006A6CFB /* AddUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddUpViewController.swift; sourceTree = "<group>"; };
 		53A733D11BABF11200A0232D /* EmailSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailSignUpViewController.swift; sourceTree = "<group>"; };
 		53BA05A11BF7109D000BF774 /* UserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		53DACA171BA692ED0012D4A1 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			children = (
 				53739FEC1BEBF2E8007FD9E9 /* MoreViewController.swift */,
 				53BA05A11BF7109D000BF774 /* UserInfoViewController.swift */,
+				5390C95C1BF8C70A006A6CFB /* AddUpViewController.swift */,
 			);
 			name = TabbedView;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				5381DC4A1BC796AB0011C017 /* PostSignUpViewController.swift in Sources */,
 				5389CFD01BADC18700768D6E /* LegalPageViewController.swift in Sources */,
 				53BA05A21BF7109D000BF774 /* UserInfoViewController.swift in Sources */,
+				5390C95D1BF8C70A006A6CFB /* AddUpViewController.swift in Sources */,
 				81BA814B1A49DA1800E65899 /* AppDelegate.swift in Sources */,
 				53A733D21BABF11200A0232D /* EmailSignUpViewController.swift in Sources */,
 			);
