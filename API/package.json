@@ -1,0 +1,26 @@
+{
+  "name": "acquere",
+  "version": "1.0.0",
+  "description": "Connecting professionals",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git clone https://prashantghimire@bitbucket.org/401fall15tus/swift.git"
+  },
+  "keywords": [
+    "iOS",
+    "Android",
+    "Acquere"
+  ],
+  "author": "Rahul Shrestha, Prashant Ghimire, Subash Mishra",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "node-parse-api": "^0.3.8",
+    "nodemon": "^1.8.1"
+  }
+}
