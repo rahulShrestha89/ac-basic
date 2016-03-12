@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ParseFacebookUtilsV4
 
 class LogInViewController: UIViewController {
 
@@ -44,6 +45,29 @@ class LogInViewController: UIViewController {
         button.layer.cornerRadius = 7
     }
     
+    @IBAction func facebookLogInTapped(sender: AnyObject) {
+        
+        PFUser.logOut()
+        let permissions=["email","public_profile"]
+        PFFacebookUtils.logInInBackgroundWithReadPermissions(permissions) {
+            (user: PFUser?, error: NSError?) -> Void in
+            if let user = user {
+                if user.isNew {
+                    let newUser = UIAlertController(title: "Congrats!", message: "You have been Signed up and Logged in through Facebook.", preferredStyle: UIAlertControllerStyle.Alert)
+                    newUser.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                    self.presentViewController(newUser, animated: true, completion: nil);
+                } else {
+                    let logInSuccess = UIAlertController(title: "Success", message: "You have been Logged In successfully.", preferredStyle: UIAlertControllerStyle.Alert)
+                    logInSuccess.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                    self.presentViewController(logInSuccess, animated: true, completion: nil);
+                }
+            } else {
+                let logInCancel = UIAlertController(title: "Failed", message: "Uh oh. The user cancelled the Facebook Log In!", preferredStyle: UIAlertControllerStyle.Alert)
+                logInCancel.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                self.presentViewController(logInCancel, animated: true, completion: nil);
+            }
+        }
+    }
     
 
 

@@ -15,6 +15,7 @@ class EmailLogInViewController: UIViewController {
     @IBOutlet weak var emailAddressTextField: UITextField!
     @IBOutlet weak var logInButton: UIButton!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var forgotPassword: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,12 +33,23 @@ class EmailLogInViewController: UIViewController {
         button.layer.cornerRadius = 7
     }
 
+    @IBAction func forgotPasswordButtonTapped(sender: AnyObject) {
+        if self.emailAddressTextField.text=="" {
+            let blankFieldAlert = UIAlertController(title: "Empty Form Field Error", message: "Enter an email address to reset Password.", preferredStyle: UIAlertControllerStyle.Alert)
+            blankFieldAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            self.presentViewController(blankFieldAlert, animated: true, completion: nil);
+        }else {
+            PFUser.requestPasswordResetForEmailInBackground(self.emailAddressTextField.text!)
+            let passwordChangeAlert = UIAlertController(title: "Email Sent", message: "Check your email for further instruction.", preferredStyle: UIAlertControllerStyle.Alert)
+            passwordChangeAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            self.presentViewController(passwordChangeAlert, animated: true, completion: nil);
+        }
+    }
     @IBAction func logInButtonTapped(sender: AnyObject) {
         
         let passwordString:String = passwordTextField.text!
         let passwordCount = passwordString.characters.count
-        
-        var currentUser = PFUser.currentUser()
+   
         
         if self.emailAddressTextField.text=="" || self.passwordTextField.text==""  {
             let blankFieldAlert = UIAlertController(title: "Empty Form Field Error", message: "All the Entries are required.", preferredStyle: UIAlertControllerStyle.Alert)
@@ -88,18 +100,36 @@ class EmailLogInViewController: UIViewController {
                     dispatch_after(activityDispatchTime, dispatch_get_main_queue(), {
                         myActivityIndicatorView.stopActivity()
                         UIApplication.sharedApplication().endIgnoringInteractionEvents()
-                        self.view?.backgroundColor = UIColor(red: 0.082, green: 0.396, blue: 0.753, alpha: 1)
+                        self.view?.backgroundColor = UIColor(red: 0, green: 0.749, blue: 0.647, alpha: 1)
                         
-                        let loginSuccess = UIAlertController(title: "Successful LogIn", message: "All good!!", preferredStyle: UIAlertControllerStyle.Alert)
+                        var currentUser = PFUser.currentUser()
                         
-                        loginSuccess.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action: UIAlertAction!) -> () in
-                            //self.performSegueWithIdentifier("signUpByEmailToLogIn", sender: nil)
-                            
-                        }))
-                        
-                        self.presentViewController(loginSuccess, animated: true, completion: nil);
+                        if currentUser != nil { 
+                            // if the user is login for the first time
+                            if currentUser?["firstTimeLoggingIn"] as! Bool == true{
+                                // go to post sign up for the first login
+                                currentUser?["firstTimeLoggingIn"]=false
+                                currentUser?.saveInBackground()
+                                self.performSegueWithIdentifier("firstLoginToSignUp", sender: nil)
+                            // if previosuly logged in
+                            } else{
+                                
+                                self.performSegueWithIdentifier("afterVerified", sender: nil)
+                                
+//                                // TEMPORARY: Show alert view controller
+//                                let loginSuccess = UIAlertController(title: "Successful LogIn", message: "All good!!", preferredStyle: UIAlertControllerStyle.Alert)
+//                                
+//                                loginSuccess.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action: UIAlertAction!) -> () in
+//                                                        }))
+//                                
+//                                self.presentViewController(loginSuccess, animated: true, completion: nil);
+                            }
+                        } else {
+                            print("No user found")
+                        }
                         
                     })
+                    
                 }
             }
         }

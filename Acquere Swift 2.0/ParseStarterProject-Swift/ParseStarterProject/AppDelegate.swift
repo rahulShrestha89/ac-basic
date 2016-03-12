@@ -10,7 +10,8 @@
 import UIKit
 import Fabric
 import TwitterKit
-
+import FBSDKCoreKit
+import ParseFacebookUtilsV4
 import Parse
 
 // If you want to use any of the UI components, uncomment this line
@@ -41,7 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Enable storing and querying data from Local Datastore.
         // Remove this line if you don't want to use Local Datastore features or want to use cachePolicy.
         Parse.enableLocalDatastore()
-        Fabric.with([Twitter.self()])
+        //Fabric.with([Twitter.self()])
 
         // ****************************************************************************
         // Uncomment this line if you want to enable Crash Reporting
@@ -52,15 +53,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.setApplicationId("0WIFgvDjclrIRUZJTD5MjW02iNfv74GkUD78ipC6",
             clientKey: "mbJQmq5YAE21XLruBib7HDPV5VAsfOlQY1EV3tHk")
         
-        
-        
-        //
-        // If you are using Facebook, uncomment and add your FacebookAppID to your bundle's plist as
-        // described here: https://developers.facebook.com/docs/getting-started/facebook-sdk-for-ios/
-        // Uncomment the line inside ParseStartProject-Bridging-Header and the following line here:
-        // PFFacebookUtils.initializeFacebook()
+     
+        PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
         // ****************************************************************************
-
+        
         PFUser.enableAutomaticUser()
 
         let defaultACL = PFACL();
@@ -98,8 +94,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //            application.registerForRemoteNotificationTypes(types)
         //        }
         
-
-        return true
+        
+    
+        return FBSDKApplicationDelegate.sharedInstance().application(application,didFinishLaunchingWithOptions : launchOptions)
     }
 
     //--------------------------------------
@@ -147,11 +144,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //--------------------------------------
     // MARK: Facebook SDK Integration
     //--------------------------------------
+    func application(application: UIApplication,
+        openURL url: NSURL,
+        sourceApplication: String?,
+        annotation: AnyObject?) -> Bool {
+            return FBSDKApplicationDelegate.sharedInstance().application(application,
+                openURL: url,
+                sourceApplication: sourceApplication,
+                annotation: annotation)
+    }
+    
+    
+    //Make sure it isn't already declared in the app delegate (possible redefinition of func error)
+    func applicationDidBecomeActive(application: UIApplication) {
+        FBSDKAppEvents.activateApp()
+    }
 
-    ///////////////////////////////////////////////////////////
-    // Uncomment this method if you are using Facebook
-    ///////////////////////////////////////////////////////////
-    // func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
-    //     return FBAppCall.handleOpenURL(url, sourceApplication:sourceApplication, session:PFFacebookUtils.session())
-    // }
-}
+
+    }

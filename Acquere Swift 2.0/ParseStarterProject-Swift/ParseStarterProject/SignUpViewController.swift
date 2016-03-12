@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ParseFacebookUtilsV4
 import TwitterKit
 
 class SignUpViewController: UIViewController {
@@ -48,4 +49,27 @@ class SignUpViewController: UIViewController {
         button.layer.cornerRadius = 7
     }
 
-}
+    @IBAction func facebookSignUpTapped(sender: AnyObject) {
+        
+        let permissions = ["public_profile","email"]
+        PFFacebookUtils.logInInBackgroundWithReadPermissions(permissions) {
+            (user: PFUser?, error: NSError?) -> Void in
+            if let user = user {
+                if user.isNew {
+                    let signUpSuccess = UIAlertController(title: "Success", message: "User Signed Up and Logged In Facebook!", preferredStyle: UIAlertControllerStyle.Alert)
+                    signUpSuccess.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                    self.presentViewController(signUpSuccess, animated: true, completion: nil);
+                } else {
+                    let userExists = UIAlertController(title: "Duplicate Error", message: "User Already Exists. Please Log In  instead of Sign Up!", preferredStyle: UIAlertControllerStyle.Alert)
+                    userExists.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                    self.presentViewController(userExists, animated: true, completion: nil);
+                }
+            } else {
+                let logInCancel = UIAlertController(title: "Failed", message: "Uh oh. The user cancelled the Facebook Sign Up!", preferredStyle: UIAlertControllerStyle.Alert)
+                logInCancel.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                self.presentViewController(logInCancel, animated: true, completion: nil);
+            }
+        }
+
+    }
+    }

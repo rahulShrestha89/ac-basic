@@ -83,6 +83,8 @@ class EmailSignUpViewController: UIViewController{
             user.username = emailAddressTextField.text
             user["firstName"] = firstNameTextField.text
             user["lastName"] = lastNameTextField.text
+            user["firstTimeLoggingIn"] = true
+            user["hasHashTagUsername"] = false
             user.signUpInBackgroundWithBlock({ (success: Bool, error: NSError?) -> Void in
                 if error != nil{
                     let error = UIAlertController(title: "Multiple Account", message: "Account Alreday Registered with this Email.", preferredStyle: UIAlertControllerStyle.Alert)
